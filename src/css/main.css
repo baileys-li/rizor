@@ -1,3 +1,4 @@
+/** General Files ** */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -343,10 +344,14 @@ img {
   margin: 0 auto;
   padding: 0 15px; }
 
+/** Blocks **/
 .page-header {
-  margin-top: 30px;
-  position: -webkit-sticky;
-  position: sticky; }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 30px 0;
+  background-color: #a9f9be;
+  transition: top 0.3s; }
 
 .main-nav {
   display: flex;
@@ -365,7 +370,6 @@ img {
     font-family: Roboto;
     font-size: 14px;
     font-weight: bold;
-    line-height: 5.71;
     letter-spacing: 1.12px;
     text-transform: uppercase; }
   .main-nav__link {
