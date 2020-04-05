@@ -1,4 +1,5 @@
 block pageInfo
+  - let companyName = "Unnamed Company"
   - let productName = "Default product name";
   - let title = "Default Title";
 
@@ -13,7 +14,7 @@ html(lang="ru")
     link(href="css/main.css", rel="stylesheet")
 
   body
-
+    include ../assets/sprite.svg
     include ../include/_header
 
     main.page-main

@@ -1,11 +1,17 @@
-header.page-header
-  img(src="", alt="alt").logo
+- const navItems = {"#features": "Преимущества", "#specs": "Характеристики", "#for_whom": "Для кого"}
 
-  nav
-    ul
-      li
-        a(href="#features") Преимущества
-      li
-        a(href="#specs") Характеристики
-      li
-        a(href="#for_whom") Для кого
+
+header.page-header.container
+
+  nav.main-nav.container
+
+    a(href="#intro").logo._logo= "Логотип " + companyName + ", наверх"
+      svg( role="img", focusable="false", width="156", height="40")._img
+        use(xlink:href="#logo__gear", width="40", height="40", x="0")._gear
+        use(xlink:href="#logo__text", width="114", height="29", x="44", y="5")._text
+
+
+    ul._list
+      each val, key in navItems
+        li._item
+          a(href=key)._link.-active= val

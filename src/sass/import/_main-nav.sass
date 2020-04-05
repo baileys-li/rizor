@@ -1,0 +1,30 @@
+.main-nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &__logo
+    font-size: 0
+
+  &__list
+    width: (500 / 1200) * 100%
+    display: flex
+    justify-content: space-between
+    @include reset-list
+
+  &__item
+    font-family: Roboto
+    font-size: 14px
+    font-weight: bold
+    line-height: 5.71
+    letter-spacing: 1.12px
+    text-transform: uppercase
+
+  &__link
+    color: $primary-foreground
+    text-decoration: none
+
+    &--active
+      background-image: linear-gradient(to right, blue 75%, transparent 75%)
+      background-position: 0 1.04em
+      background-repeat: no-repeat
+      background-size: 10% 1px
