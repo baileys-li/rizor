@@ -376,3 +376,13 @@ img {
       background-position: 0 1.04em;
       background-repeat: no-repeat;
       background-size: 10% 1px; }
+
+.page-footer {
+  background: #292929;
+  height: 28px; }
+  .page-footer__copyright {
+    font-size: 12px;
+    line-height: 2.4;
+    color: #605f5f;
+    text-align: center;
+    margin: 0; }
