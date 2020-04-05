@@ -22,7 +22,7 @@ const paths = {
   },
 
   sass: {
-    src: srcBase + "sass/**/*.sass",
+    src: srcBase + "sass/**/*.{sass,scss}",
     dest: srcBase + "css/",
   },
 
