@@ -6,25 +6,50 @@
     font-size: 0
 
   &__list
-    width: (500 / 1200) * 100%
     display: flex
     justify-content: space-between
+    width: (500 / 1200) * 100%
+
     @include reset-list
 
   &__item
-    font-family: Roboto
-    font-size: 14px
     font-weight: bold
-    // line-height: 5.71
-    letter-spacing: 1.12px
+    font-size: 14px
     text-transform: uppercase
+    letter-spacing: 1.12px
 
   &__link
+    position: relative
+
     color: $primary-foreground
     text-decoration: none
 
-    &--active
-      background-image: linear-gradient(to right, blue 75%, transparent 75%)
-      background-position: 0 1.04em
-      background-repeat: no-repeat
-      background-size: 10% 1px
+    &::before
+      content: ""
+      position: absolute
+      bottom: -3px
+
+      height: 1px
+
+      background-color: $primary-accent
+
+      transition: all 0.8s ease-out 0.5s
+
+    &--active::before
+      left: -10px
+
+      width: 20px
+
+    &:hover::before,
+    &:focus::before
+      left: 0
+
+      width: 40%
+
+    &:active::before
+      width: 100%
+
+    &:focus
+      color: $primary-accent
+
+      outline: none

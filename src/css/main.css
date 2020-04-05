@@ -350,7 +350,7 @@ img {
   top: 0;
   width: 100%;
   padding: 30px 0;
-  background-color: #a9f9be;
+  background-color: #ffffff;
   transition: top 0.3s; }
 
 .main-nav {
@@ -360,26 +360,39 @@ img {
   .main-nav__logo {
     font-size: 0; }
   .main-nav__list {
-    width: 41.66667%;
     display: flex;
     justify-content: space-between;
+    width: 41.66667%;
     margin: 0;
     padding: 0;
     list-style: none; }
   .main-nav__item {
-    font-family: Roboto;
-    font-size: 14px;
     font-weight: bold;
-    letter-spacing: 1.12px;
-    text-transform: uppercase; }
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.12px; }
   .main-nav__link {
+    position: relative;
     color: #000000;
     text-decoration: none; }
-    .main-nav__link--active {
-      background-image: linear-gradient(to right, blue 75%, transparent 75%);
-      background-position: 0 1.04em;
-      background-repeat: no-repeat;
-      background-size: 10% 1px; }
+    .main-nav__link::before {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      height: 1px;
+      background-color: #3a30f8;
+      transition: all 0.8s ease-out 0.5s; }
+    .main-nav__link--active::before {
+      left: -10px;
+      width: 20px; }
+    .main-nav__link:hover::before, .main-nav__link:focus::before {
+      left: 0;
+      width: 40%; }
+    .main-nav__link:active::before {
+      width: 100%; }
+    .main-nav__link:focus {
+      color: #3a30f8;
+      outline: none; }
 
 .page-footer {
   background: #292929;
