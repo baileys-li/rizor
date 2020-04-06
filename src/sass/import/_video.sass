@@ -8,8 +8,8 @@
 
   &__play
     position: absolute
-    top: 72px
-    left: -72px
+    top: 75px
+    left: -73px
     z-index: 3
 
     font-weight: bold
@@ -22,6 +22,8 @@
     border: none
     cursor: pointer
 
+    display: flex
+
     &-text
       text-align: left
       text-orientation: mixed
@@ -29,8 +31,11 @@
       transform: rotate(180deg)
 
       writing-mode: vertical-rl
+      margin-right: 5px
 
     &-icon
       filter: drop-shadow(0px 3px 7px rgba(0, 0, 1, 0.3))
 
       fill: $primary-accent
+
+      flex-shrink: 0
