@@ -1,29 +1,36 @@
 .video
+  cursor: pointer
   &__preview
-    height: 100%
     width: 100%
+    height: 100%
+
     object-fit: cover
 
   &__play
     position: absolute
-    background: none
-    border: none
     top: 72px
     left: -72px
-    font-weight: bold
-    text-transform: uppercase
-    font-size: 12px
-    text-transform: uppercase
-    line-height: 1.2
-    cursor: pointer
     z-index: 3
 
+    font-weight: bold
+    font-size: 12px
+    line-height: 1.2
+    text-transform: uppercase
+    text-transform: uppercase
+
+    background: none
+    border: none
+    cursor: pointer
+
     &-text
-      writing-mode: vertical-rl
-      text-orientation: mixed
-      transform: rotate(180deg)
       text-align: left
+      text-orientation: mixed
+
+      transform: rotate(180deg)
+
+      writing-mode: vertical-rl
 
     &-icon
-      fill: $primary-accent
       filter: drop-shadow(0px 3px 7px rgba(0, 0, 1, 0.3))
+
+      fill: $primary-accent
