@@ -78,6 +78,7 @@ gulp.task("watch", () => {
   gulp.watch(paths.pages.all, gulp.series("pug"));
   gulp.watch(paths.sass.src, gulp.series("sass", "css"));
   gulp.watch(destBase + "*.html").on("change", reload);
+  gulp.watch(destBase + "js/**/*.js").on("change", reload);
 });
 
 gulp.task("serve", () =>
