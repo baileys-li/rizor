@@ -1,36 +1,30 @@
 "use strict";
 
-const header = document.querySelector(".page-header");
+const header = document.querySelector(".page-header"),
+  mainNavLinks = header.querySelectorAll(".main-nav__link");
 
 showHideOnScroll(header);
 
-const mainNavLinks = header.querySelectorAll(".main-nav__link"),
-  mainSections = document.querySelectorAll("main section");
+activeNavLinkOnScroll(mainNavLinks, "main-nav__link--current");
 
-// console.log(mainNavLinks);
-// console.log(mainSections);
+function activeNavLinkOnScroll(links, classToAdd) {
+  window.addEventListener("scroll", () => {
+    let fromTop = window.pageYOffset;
 
-// let lastId;
-// let cur = [];
-/*
-window.addEventListener("scroll", (event) => {
-  let fromTop = window.pageYOffset;
+    links.forEach((link) => {
+      let section = document.querySelector(link.hash);
 
-  mainNavLinks.forEach((link) => {
-    let section = document.querySelector(link.hash);
-
-    // console.log(link.hash);
-    console.log(section.offsetTop <= fromTop);
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
-      link.classList.add(".main-nav__link--current");
-    } else {
-      link.classList.remove(".main-nav__link--current");
-    }
+      if (
+        section.offsetTop - 80 <= fromTop &&
+        section.offsetTop + section.offsetHeight > fromTop
+      ) {
+        link.classList.add(classToAdd);
+      } else {
+        link.classList.remove(classToAdd);
+      }
+    });
   });
-}); */
+}
 
 function showHideOnScroll(element) {
   let prevScrollPos = window.pageYOffset;

@@ -13,7 +13,9 @@ section.intro#intro
             use(xlink:href="#icon-play")
 
     figcaption._text
-      h1._headline!= `${product.company} <br> ${product.line} <br>`
+      h1._headline
+        | #{product.company}<br>
+        | #{product.line}<br>
         b.product__ver= product.ver
 
 
@@ -21,9 +23,3 @@ section.intro#intro
       a(href="#features")._scroll-down Листать вниз
         svg(role="img", focusable="false", width="12", height="96")
           use(xlink:href="#icon-down")
-
-
-//- https://i.ytimg.com/vi/neHA4MJwpnY/
-
-
-//- Макеевский способ https://youtu.be/4JS70KB9GS0
