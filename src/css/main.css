@@ -327,6 +327,7 @@ html {
   font-family: "Roboto", "Arial", "Helvetica", sans-serif; }
 
 img {
+  height: auto;
   max-width: 100%; }
 
 .visually-hidden:not(:focus):not(:active), input[type="checkbox"].visually-hidden, input[type="radio"].visually-hidden {
@@ -360,6 +361,13 @@ img {
   border-radius: 3em;
   color: #3a30f8;
   background-color: #ffffff; }
+
+.product__ver {
+  letter-spacing: -12px; }
+
+.decorative {
+  position: absolute;
+  fill: #f8f8f8; }
 
 /** Blocks **/
 .page-header {
@@ -417,29 +425,61 @@ img {
 .intro {
   width: 100%;
   overflow: hidden;
-  margin-top: 100px; }
+  margin-top: 65px;
+  padding: 35px 0 93px; }
   .intro__wrapper {
     display: flex;
     position: relative;
-    min-height: 750px; }
+    min-height: 750px;
+    align-items: stretch; }
   .intro__media {
     order: 1;
-    position: absolute;
-    left: 20.95vw;
-    z-index: -1;
-    width: auto;
-    max-width: none; }
+    background-image: linear-gradient(to top, #3a30f8, #8330c6);
+    flex: 1 0 auto;
+    position: relative;
+    width: 57vw; }
+  .intro__text {
+    padding-top: 184px;
+    flex: 0 0 470px;
+    width: 470px;
+    position: relative;
+    z-index: 1;
+    overflow: visible; }
   .intro__headline {
+    margin: 0;
     font-family: 'Rubik Mono One';
     font-size: 80px;
     letter-spacing: 6.4px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    line-height: 1.2; }
   .intro__subheader {
     line-height: 1.5;
     letter-spacing: 1.6px;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase; }
+  .intro__scroll-down {
+    font-size: 0;
+    display: block;
+    width: 70px;
+    text-align: center;
+    margin-top: 32px;
+    color: #3a30f8;
+    fill: #3a30f8; }
+    .intro__scroll-down:hover, .intro__scroll-down:focus {
+      color: #8330c6;
+      fill: #8330c6; }
+    .intro__scroll-down:focus {
+      outline: none;
+      transform: scale(1.2); }
+      .intro__scroll-down:focus svg {
+        transform: scale(1.2);
+        transition: transform 0.5s; }
+  .intro__decorative {
+    height: 889px;
+    width: 900px;
+    left: -60%;
+    top: -40px; }
 
 .features__headline {
   color: #3a30f8;

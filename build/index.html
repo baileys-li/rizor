@@ -23,6 +23,9 @@
       <path d="M99.77 17.41v7.81s.34 4.12-2.9 4.16c-3.35.03-3.39.03-3.76.02h-.08c-.52-.02-2.91-.08-2.88-4.18 0-1.68.02-2.98.04-4.1.02-2.16.04-3.72.02-6.27-.03-3.17 1.98-3.77 2.8-4.01a33.27 33.27 0 018.64-1.42 55.8 55.8 0 0110.05.69s2.16.21 2.1 2c-.07 1.77-1.76 1.68-2.55 1.6-.11 0-.33-.03-.62-.08-1.87-.28-6.97-1.03-8.97.29-2.02 1.32-1.9 3.5-1.9 3.5z"/>
     </symbol>
 
+    <symbol id="icon-down" viewBox="0 0 9 96">
+      <path fill-rule="evenodd" d="M3.86 86.5V.9h1v85.6h3.39l-3.89 9-3.89-9h3.39z" clip-rule="evenodd"/>
+    </symbol>
   </defs>
 </svg>
 
@@ -41,14 +44,17 @@
     </header>
     <main class="page-main">
       <section class="intro" id="intro">
-        <figure class="intro__wrapper">
-          <div class="intro__media video"><a class="intro__link" href="https://youtu.be/678suPK9iIc" target="_blank"><img class="intro__media" src="img/photo1.jpg" alt="Представляем Rizor Hovertrax 4.0" width="1075" height="750"/></a>
-            <button class="intro__play">Смотреть видео</button>
-          </div>
-          <figcaption class="intro__text container">
-            <h1 class="intro__headline"><span>Rizor<br></span><span>Hovertrax<br></span><span>4.0<br></span>
-            </h1>
-            <p class="intro__subheader">Маневренность, легкость, экологичность</p><a href="#features">Листать вниз</a>
+        <figure class="intro__wrapper container">
+          <svg class="intro__decorative decorative" role="img" focusable="false" width="0" height="0">
+            <use xlink:href="#logo__gear"></use>
+          </svg>
+          <div class="intro__media"></div>
+          <figcaption class="intro__text">
+            <h1 class="intro__headline">Rizor <br> Hovertrax <br><b class="product__ver">4.0</b></h1>
+            <p class="intro__subheader">Маневренность, легкость, экологичность</p><a class="intro__scroll-down" href="#features">Листать вниз
+              <svg role="img" focusable="false" width="12" height="96">
+                <use xlink:href="#icon-down"></use>
+              </svg></a>
           </figcaption>
         </figure>
       </section>

@@ -1,25 +1,37 @@
 .intro
   width: 100%
   overflow: hidden
-  margin-top: 100px
+  margin-top: 65px
+  padding: 35px 0 93px
+  // min-height: 878px
   &__wrapper
     display: flex
     position: relative
     min-height: 750px
+    align-items: stretch
 
   &__media
+    // display: block
     order: 1
-    position: absolute
-    left: 20.95vw // 25.26vw // 485px / 1920px * 100
-    z-index: -1
-    width: auto
-    max-width: none
+    background-image: $gradient-accent
+    // height: 100%
+    flex: 1 0 auto
+
+    position: relative
+
+    width: 57vw
+
+  &__text
+    padding-top: 184px
+    flex: 0 0 470px
+    width: 470px
+    position: relative
+    z-index: 1
+    overflow: visible
 
   &__headline
-    font-family: 'Rubik Mono One'
-    font-size: 80px
-    letter-spacing: 6.4px
-    text-transform: uppercase
+    margin: 0
+    @include headline
 
   &__subheader
     line-height: 1.5
@@ -27,3 +39,28 @@
     font-size: 20px
     font-weight: bold
     text-transform: uppercase
+
+  &__scroll-down
+    font-size: 0
+    display: block
+    width: 70px
+    text-align: center
+    margin-top: 32px
+    @include colorize-text-icon($primary-accent)
+
+    &:hover,
+    &:focus
+      @include colorize-text-icon($secondary-accent)
+
+    &:focus
+      outline: none
+      transform: scale(1.2)
+      & svg
+        transform: scale(1.2)
+        transition: transform 0.5s
+
+  &__decorative
+    height: 889px
+    width: 900px
+    left: -60%
+    top: -40px
