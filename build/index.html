@@ -35,55 +35,68 @@
         <ul class="main-nav__list">
           <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="#features">Преимущества</a></li>
           <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="#specs">Характеристики</a></li>
-          <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="#for_whom">Для кого</a></li>
+          <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="#for-whom">Для кого</a></li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
       <section class="intro" id="intro">
-        <figure>
-          <div class="video"><a class="video__link" href="https://youtu.be/678suPK9iIc" target="_blank"><img class="video__media" src="img/photo1.jpg" alt="Представляем Rizor Hovertrax 4.0" width="1075" height="750"/></a>
-            <button class="video__play">Смотреть видео</button>
+        <figure class="intro__wrapper">
+          <div class="intro__media video"><a class="intro__link" href="https://youtu.be/678suPK9iIc" target="_blank"><img class="intro__media" src="img/photo1.jpg" alt="Представляем Rizor Hovertrax 4.0" width="1075" height="750"/></a>
+            <button class="intro__play">Смотреть видео</button>
           </div>
-          <figcaption>
-            <h1>Rizor Hovertrax 4.0</h1>
-            <p>Маневренность, легкость, экологичность</p><a href="#features">Листать вниз</a>
+          <figcaption class="intro__text container">
+            <h1 class="intro__headline"><span>Rizor<br></span><span>Hovertrax<br></span><span>4.0<br></span>
+            </h1>
+            <p class="intro__subheader">Маневренность, легкость, экологичность</p><a href="#features">Листать вниз</a>
           </figcaption>
         </figure>
       </section>
       <sections class="features" id="features">
-        <h2>Преимущества</h2>
-        <h3>Дизайн</h3>
-        <p>Внешний вид скутера дышит идеями футуризма:</p>
-        <ul>
-          <li>плавные линии</li>
-          <li>подсветка светодиодными индикаторами</li>
-          <li>рельефные бамперы, оснащенные защитными панелями</li>
-        </ul>
-        <h3>Цвет</h3>
-        <p>Модель представлена сразу в нескольких цветах.</p>
-        <ul>
-          <li>лаймовый</li>
-          <li>бирюзовый</li>
-          <li>красный</li>
-          <li>белый</li>
-          <li>черный</li>
-        </ul>
+        <div class="features__wrapper container">
+          <h2 class="features__headline">Преимущества</h2>
+          <article class="product-info">
+            <h3 class="product-info__title">Дизайн</h3>
+            <p class="product-info__subtitle">Внешний вид скутера дышит идеями футуризма:</p>
+            <ul class="product-info__list">
+              <li class="product-info__spec">плавные линии</li>
+              <li class="product-info__spec">подсветка светодиодными индикаторами</li>
+              <li class="product-info__spec">рельефные бамперы, оснащенные защитными панелями</li>
+            </ul>
+          </article>
+          <article class="product-info">
+            <h3 class="product-info__title">Цвет</h3>
+            <p>Модель представлена сразу в нескольких цветах.</p>
+            <ul class="product-info__list">
+              <li>лаймовый</li>
+              <li>бирюзовый</li>
+              <li>красный</li>
+              <li>белый</li>
+              <li>черный</li>
+            </ul>
+          </article>
+        </div>
       </sections>
       <sections class="specs" id="specs">
-        <h2>Характеристики</h2>
-        <h3>Режимы</h3>
-        <p>Помимо «умной» подсветки, Hovertrax 4.0 снабжён двумя скоростными режимами.</p>
-        <ul>
-          <li>Один для продвинутых пользователей</li>
-          <li>Второй для новичков</li>
-        </ul>
-        <p>13 км/ч Максимальная скорость</p>
-        <p>2 Скоростных режима</p>
+        <div class="specs__wrapper container">
+          <h2 class="specs__headline">Характеристики</h2>
+          <article class="product-info">
+            <h3 class="product-info__title">Режимы</h3>
+            <p>Помимо «умной» подсветки, Hovertrax 4.0 снабжён двумя скоростными режимами.</p>
+            <ul class="product-info__list">
+              <li class="product-info__spec">Один для продвинутых пользователей</li>
+              <li class="product-info__spec"> Второй для новичков</li>
+            </ul>
+            <p>13 км/ч Максимальная скорость</p>
+            <p>2 Скоростных режима</p>
+          </article>
+        </div>
       </sections>
-      <section class="for_whom" id="for_whom">
-        <h2>Для кого</h2>
-        <p>При максимально выдерживаемой нагрузке в 100 кг отлично подойдёт, как для подрастающего поколения, так и для более взрослых «наездников». Это единственный гироскутер со специальным детским режимом езды.</p><a href="/catalogue">Перейти в каталог</a>
+      <section class="for-whom" id="for-whom">
+        <div class="for-whom__wrapper container">
+          <h2 class="for-whom__headline">Для кого</h2>
+          <p>При максимально выдерживаемой нагрузке в 100 кг отлично подойдёт, как для подрастающего поколения, так и для более взрослых «наездников». Это единственный гироскутер со специальным детским режимом езды.</p><a class="for-whom__button button" href="/catalogue">Перейти в каталог</a>
+        </div>
       </section>
     </main>
     <footer class="page-footer">

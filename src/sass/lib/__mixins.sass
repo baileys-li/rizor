@@ -2,3 +2,49 @@
   margin: 0
   padding: 0
   list-style: none
+
+/** Color combination **/
+@mixin base-colors
+  color: $primary-foreground // dark
+  background-color: $primary-background //light
+
+@mixin base-colors--invert
+  color: $primary-background //light
+  background-color: $primary-foreground //dark
+
+@mixin accent-colors
+  color: $primary-accent
+  background-color: $primary-background //light
+
+@mixin accent-colors--invert
+  color: $primary-background //light
+  background-color: $primary-accent
+
+/** Text styles **/
+
+@mixin base-text
+  font-weight: 300
+  font-size: 18px
+  line-height: 1.67
+  font-family: "Roboto", "Arial", "Helvetica", sans-serif
+
+//h1
+@mixin headline
+  font-family: 'Rubik Mono One'
+  font-size: 80px
+  letter-spacing: 6.4px
+  text-transform: uppercase
+
+// h2
+@mixin section-headline
+  font-size: 20px
+  font-weight: bold
+  line-height: 4
+  letter-spacing: 1.6px
+  text-transform: uppercase
+
+// h3
+@mixin category-title
+  font-family: 'Rubik Mono One'
+  font-size: 40px
+  letter-spacing: 3.2px

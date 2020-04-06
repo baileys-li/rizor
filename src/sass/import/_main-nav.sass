@@ -40,16 +40,16 @@
 
       width: 20px
 
-    &:hover::before,
-    &:focus::before
-      left: 0
+    &:hover,
+    &:focus
+      color: $primary-accent
+      &::before
+        left: 0
 
-      width: 40%
+        width: 40%
 
     &:active::before
       width: 100%
 
     &:focus
-      color: $primary-accent
-
       outline: none

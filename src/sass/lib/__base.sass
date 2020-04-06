@@ -6,15 +6,12 @@
 html
   box-sizing: border-box
 
-  font-family: "Roboto", sans-serif
-  color: $primary-foreground
-
-  background-color: $primary-background
-
   scroll-behavior: smooth
 
-h1
-  font-family: 'Rubik Mono One', sans-serif
+  width: 100vw
+  max-width: 100%
+  @include base-colors
+  @include base-text
 
 img
   max-width: 100%
@@ -38,3 +35,15 @@ img
   max-width: $container-width
   margin: 0 auto
   padding: 0 $container-padding
+
+.button
+  text-decoration: none
+  font-size: 16px
+  letter-spacing: 1.28px
+  line-height: 1.88
+  text-transform: uppercase
+  font-weight: bold
+  padding: 18px 45px
+  box-shadow: 0px 5px 5px 0 rgba(0, 0, 1, 0.2)
+  border-radius: 3em
+  @include accent-colors
