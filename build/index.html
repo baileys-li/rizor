@@ -26,6 +26,11 @@
     <symbol id="icon-down" viewBox="0 0 9 96">
       <path fill-rule="evenodd" d="M3.86 86.5V.9h1v85.6h3.39l-3.89 9-3.89-9h3.39z" clip-rule="evenodd"/>
     </symbol>
+
+    <symbol id="icon-play" viewBox="0 0 66 72">
+      <path d="M60.48 27.23a10 10 0 010 17.32L15.95 70.26a10 10 0 01-15-8.66V10.18a10 10 0 0115-8.66l44.53 25.71z"/>
+    </symbol>
+
   </defs>
 </svg>
 
@@ -48,7 +53,12 @@
           <svg class="intro__decorative decorative" role="img" focusable="false" width="0" height="0">
             <use xlink:href="#logo__gear"></use>
           </svg>
-          <div class="intro__media"></div>
+          <div class="video intro__media" data-id="678suPK9iIc"><a class="video__link" href="https://youtu.be/678suPK9iIc" target="_blank"><img class="video__preview intro__preview" src="img/photo1.jpg" alt="Представляем Rizor Hovertrax 4.0" width="215" height="150"/>
+              <button class="video__play"><span class="video__play-text">Смотреть <br> видео</span>
+                <svg class="video__play-icon" role="img" focusable="false" width="66" height="72">
+                  <use xlink:href="#icon-play"></use>
+                </svg>
+              </button></a></div>
           <figcaption class="intro__text">
             <h1 class="intro__headline">Rizor <br> Hovertrax <br><b class="product__ver">4.0</b></h1>
             <p class="intro__subheader">Маневренность, легкость, экологичность</p><a class="intro__scroll-down" href="#features">Листать вниз
@@ -108,6 +118,7 @@
     <footer class="page-footer">
       <p class="page-footer__copyright">© All rights reserved, 2017</p>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/video.js"></script>
   </body>
 </html>

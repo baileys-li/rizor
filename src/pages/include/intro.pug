@@ -3,13 +3,15 @@ section.intro#intro
   figure._wrapper.container
     svg(role="img", focusable="false", width="0", height="0")._decorative.decorative
       use(xlink:href="#logo__gear")
-    ._media
-    //-
-      ._media.video
-        a(href="https://youtu.be/678suPK9iIc", target="_blank")._link
-          img(src="img/photo1.jpg", alt="Представляем "+productName, width="1075", height="750")._media
+    .video(data-id="678suPK9iIc")._media
+      a(href="https://youtu.be/678suPK9iIc", target="_blank").video__link
+        img(src="img/photo1.jpg", alt="Представляем "+ title, width="215", height="150").video__preview.intro__preview
 
-        button._play Смотреть видео
+        button.video__play
+          span.video__play-text!= `Смотреть <br> видео`
+          svg(role="img", focusable="false", width="66", height="72").video__play-icon
+            use(xlink:href="#icon-play")
+
     figcaption._text
       h1._headline!= `${product.company} <br> ${product.line} <br>`
         b.product__ver= product.ver

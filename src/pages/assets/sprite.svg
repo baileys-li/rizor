@@ -17,5 +17,10 @@
     <symbol id="icon-down" viewBox="0 0 9 96">
       <path fill-rule="evenodd" d="M3.86 86.5V.9h1v85.6h3.39l-3.89 9-3.89-9h3.39z" clip-rule="evenodd"/>
     </symbol>
+
+    <symbol id="icon-play" viewBox="0 0 66 72">
+      <path d="M60.48 27.23a10 10 0 010 17.32L15.95 70.26a10 10 0 01-15-8.66V10.18a10 10 0 0115-8.66l44.53 25.71z"/>
+    </symbol>
+
   </defs>
 </svg>

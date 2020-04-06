@@ -1,3 +1,5 @@
+"use strict";
+
 const header = document.querySelector(".page-header");
 
 showHideOnScroll(header);
