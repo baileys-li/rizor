@@ -38,9 +38,7 @@ gulp.task("pug", () =>
     .src(paths.pages.src)
     .pipe(
       pug({
-        // pretty: true,
-        /* unpretty, because Firefox very sensitive to space in tags*/
-
+        pretty: true,
         plugins: [pugbem],
       })
     )

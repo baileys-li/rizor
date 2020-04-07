@@ -13,15 +13,14 @@ section.intro#intro
             use(xlink:href="#icon-play")
 
     figcaption._text
-      h1._headline
-        span.arrow-anchor
-          | #{product.company}
-          svg(width="20", height="72").arrow.intro__arrow
-            polyline(points="0,71 17,71 17,3", stroke-width="1").__line
-            circle(cx="17" cy="3" r="1.5").__pointer
-          br
+      h1._headline.arrow-anchor
+        | #{product.company}<br>
+        svg(width="20", height="72", role="img", focusable="false").arrow.intro__arrow
+          polyline(points="0,71 17,71 17,3", stroke-width="1").__line
+          circle(cx="17" cy="3" r="1.5").__pointer
         | #{product.line}<br>
         b.product__ver= product.ver
+
 
 
       p._subheader Маневренность, легкость, экологичность
