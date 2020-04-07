@@ -1,11 +1,30 @@
 "use strict";
 
 const header = document.querySelector(".page-header"),
-  mainNavLinks = header.querySelectorAll(".main-nav__link");
+  toggle = header.querySelector(".main-nav__toggle"),
+  mainNavList = header.querySelector(".main-nav__list"),
+  mainNavLinks = mainNavList.querySelectorAll(".main-nav__link");
 
 showHideOnScroll(header);
 changeElementNotOnTop(header, "shrink");
 activeNavLinkOnScroll(mainNavLinks, "current");
+
+setupHamburgerMenu(toggle, mainNavList);
+
+function setupHamburgerMenu(
+  toggle,
+  nav,
+  modForToggle = "open",
+  modForNav = "show"
+) {
+  const toggleOpenClass = createModifiedClass(toggle, modForToggle),
+    navOpenClass = createModifiedClass(nav, modForNav);
+
+  toggle.onclick = () => {
+    toggle.classList.toggle(toggleOpenClass);
+    nav.classList.toggle(navOpenClass);
+  };
+}
 
 function activeNavLinkOnScroll(links, classMod = "mod") {
   // All links have the same classes, so any element suitable.
