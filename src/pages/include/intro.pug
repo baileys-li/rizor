@@ -14,7 +14,12 @@ section.intro#intro
 
     figcaption._text
       h1._headline
-        | #{product.company}<br>
+        span.arrow-anchor
+          | #{product.company}
+          svg(width="20", height="72").arrow.intro__arrow
+            polyline(points="0,71 17,71 17,3", stroke-width="1").__line
+            circle(cx="17" cy="3" r="1.5").__pointer
+          br
         | #{product.line}<br>
         b.product__ver= product.ver
 
