@@ -4,10 +4,13 @@ const header = document.querySelector(".page-header"),
   mainNavLinks = header.querySelectorAll(".main-nav__link");
 
 showHideOnScroll(header);
+changeElementNotOnTop(header, "shrink");
+activeNavLinkOnScroll(mainNavLinks, "current");
 
-activeNavLinkOnScroll(mainNavLinks, "main-nav__link--current");
+function activeNavLinkOnScroll(links, classMod = "mod") {
+  // All links have the same classes, so any element suitable.
+  const newClass = createModifiedClass(links[0], classMod);
 
-function activeNavLinkOnScroll(links, classToAdd) {
   window.addEventListener("scroll", () => {
     let fromTop = window.pageYOffset;
 
@@ -18,24 +21,46 @@ function activeNavLinkOnScroll(links, classToAdd) {
         section.offsetTop - 80 <= fromTop &&
         section.offsetTop + section.offsetHeight > fromTop
       ) {
-        link.classList.add(classToAdd);
+        link.classList.add(newClass);
       } else {
-        link.classList.remove(classToAdd);
+        link.classList.remove(newClass);
       }
     });
   });
 }
 
 function showHideOnScroll(element) {
-  let prevScrollPos = window.pageYOffset;
+  let startScrollPos = window.pageYOffset;
 
-  window.onscroll = () => {
+  window.addEventListener("scroll", () => {
     let currentScrollPos = window.pageYOffset;
-    if (prevScrollPos > currentScrollPos) {
-      header.style.top = "0";
+    const elementHeight = element.offsetHeight;
+
+    if (startScrollPos > currentScrollPos) {
+      element.style.top = "0";
     } else {
-      header.style.top = `-${header.offsetHeight}px`;
+      element.style.top = `-${elementHeight}px`;
     }
-    prevScrollPos = currentScrollPos;
-  };
+    startScrollPos = currentScrollPos;
+  });
+}
+
+function changeElementNotOnTop(element, classMod = "mod") {
+  const elementHeight = element.offsetHeight,
+    newClass = createModifiedClass(element, classMod);
+
+  window.addEventListener("scroll", () => {
+    let currentScrollPos = window.pageYOffset;
+    if (currentScrollPos > elementHeight) {
+      element.classList.add(newClass);
+    } else {
+      element.classList.remove(newClass);
+    }
+  });
+}
+
+function createModifiedClass(element, mod) {
+  const classBase = element.className,
+    newClass = classBase + "--" + mod;
+  return newClass;
 }
