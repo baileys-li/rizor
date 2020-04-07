@@ -1,34 +1,31 @@
 .intro
   width: 100%
-  overflow: hidden
+  min-height: 878px
   margin-top: 65px
   padding: 35px 0 93px
-  // min-height: 878px
+  overflow: hidden
+
   &__wrapper
     display: flex
-    position: relative
-    min-height: 750px
     align-items: stretch
+    min-height: 750px
 
   &__media
-    // display: block
-    order: 1
-    background-image: $gradient-accent
-    height: 750px
     flex: 1 0 auto
-
-    position: relative
-
+    order: 1
     width: 57vw
+    height: 750px
 
   &__preview
     object-position: left center
+
   &__text
-    padding-top: 184px
-    flex: 0 0 470px
-    max-width: 470px
     position: relative
     z-index: 1
+
+    flex: 0 0 470px
+    max-width: 470px
+    padding-top: 184px
     overflow: visible
 
   &__headline
@@ -39,11 +36,12 @@
     @include subtitle
 
   &__scroll-down
-    font-size: 0
     display: block
     width: 100%
-    padding-left: 30px
     margin-top: 32px
+    padding-left: 30px
+
+    font-size: 0
     @include colorize-text-icon($primary-accent)
 
     &:hover,
@@ -57,11 +55,17 @@
       outline: none
 
   &__decorative
-    height: 889px
-    width: 900px
-    left: -60%
     top: -40px
+    left: -157%
+    z-index: -1
+
+    width: 900px
+    height: 889px
 
   &__arrow
     right: 57px
     top: -31px
+
+  &__play
+    top: 75px
+    left: -73px

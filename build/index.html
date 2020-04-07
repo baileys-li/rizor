@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Rizor Hovertrax 4.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&amp;family=Rubik+Mono+One&amp;display=swap" rel="stylesheet"/>
-    <link href="css/main.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet"/><meta name="theme-color" content="#3a30f8" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   </head>
   <body><svg xmlns="http://www.w3.org/2000/svg" style="display: none">
   <defs>
@@ -40,6 +41,13 @@
             <use class="logo__gear" xlink:href="#logo__gear" width="40" height="40" x="0"></use>
             <use class="logo__text" xlink:href="#logo__text" width="114" height="29" x="44" y="5"></use>
           </svg></a>
+        <button class="main-nav__toggle">
+          <svg class="hamburger-menu" viewBox="0 0 100 100" width="20" height="20">
+            <rect class="hamburger-menu__top" x="0" y="0" width="100%" height="20%" rx="5%"></rect>
+            <rect class="hamburger-menu__middle" x="0" y="40%" width="100%" height="20%" rx="5%"></rect>
+            <rect class="hamburger-menu__bottom" x="0" y="80%" width="100%" height="20%" rx="5%"></rect>
+          </svg>
+        </button>
         <ul class="main-nav__list">
           <li class="main-nav__item"><a class="main-nav__link" href="#features">Преимущества</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="#specs">Характеристики</a></li>
@@ -50,17 +58,22 @@
     <main class="page-main">
       <section class="intro" id="intro">
         <figure class="intro__wrapper container">
-          <svg class="intro__decorative decorative" role="img" focusable="false" width="0" height="0">
-            <use xlink:href="#logo__gear"></use>
-          </svg>
-          <div class="video intro__media" data-id="678suPK9iIc"><a class="video__link" href="https://youtu.be/678suPK9iIc" target="_blank"><img class="video__preview intro__preview" src="img/photo1.jpg" alt="Представляем Rizor Hovertrax 4.0" width="215" height="150"/>
-              <button class="video__play"><span class="video__play-text">Смотреть <br> видео</span>
-                <svg class="video__play-icon" role="img" focusable="false" width="66" height="72">
-                  <use xlink:href="#icon-play"></use>
-                </svg>
-              </button></a></div>
+                <div class="video intro__media" data-id="678suPK9iIc"><a class="video__link" href="https://youtu.be/678suPK9iIc"><img class="intro__preview video__preview" src="img/photo1.jpg" alt="Представляем Rizor Hovertrax 4.0" height="200"/>
+                    <button class="intro__play video__play"><span class="video__play-text">Смотреть <br> видео</span>
+                      <svg class="video__play-icon" role="img" focusable="false" width="66" height="72">
+                        <use xlink:href="#icon-play"></use>
+                      </svg>
+                    </button></a></div>
           <figcaption class="intro__text">
-            <h1 class="intro__headline">Rizor <br> Hovertrax <br><b class="product__ver">4.0</b></h1>
+            <svg class="intro__decorative decorative" role="img" focusable="false" width="0" height="0">
+              <use xlink:href="#logo__gear"></use>
+            </svg>
+            <h1 class="intro__headline arrow-anchor">Rizor<br>
+              <svg class="arrow intro__arrow" width="20" height="72" role="img" focusable="false">
+                <polyline class="arrow__line" points="0,71 17,71 17,3" stroke-width="1"></polyline>
+                <circle class="arrow__pointer" cx="17" cy="3" r="1.5"></circle>
+              </svg>Hovertrax<br><b class="product__ver">4.0</b>
+            </h1>
             <p class="intro__subheader">Маневренность, легкость, экологичность</p><a class="intro__scroll-down" href="#features">Листать вниз
               <svg role="img" focusable="false" width="12" height="96">
                 <use xlink:href="#icon-down"></use>
@@ -69,29 +82,37 @@
         </figure>
       </section>
       <sections class="features" id="features">
-        <div class="features__wrapper container">
-          <h2 class="features__headline">Преимущества</h2>
-          <article class="product-info">
-            <h3 class="product-info__title">Дизайн</h3>
-            <p class="product-info__subtitle">Внешний вид скутера дышит идеями футуризма:</p>
-            <ul class="product-info__list">
-              <li class="product-info__spec">плавные линии</li>
-              <li class="product-info__spec">подсветка светодиодными индикаторами</li>
-              <li class="product-info__spec">рельефные бамперы, оснащенные защитными панелями</li>
-            </ul>
-          </article>
-          <article class="product-info">
-            <h3 class="product-info__title">Цвет</h3>
-            <p>Модель представлена сразу в нескольких цветах.</p>
-            <ul class="product-info__list">
-              <li>лаймовый</li>
-              <li>бирюзовый</li>
-              <li>красный</li>
-              <li>белый</li>
-              <li>черный</li>
-            </ul>
-          </article>
-        </div>
+        <figure class="features__wrapper container">
+                <div class="video features__media" data-id="678suPK9iIc"><a class="video__link" href="https://youtu.be/678suPK9iIc"><img class="features__preview video__preview" src="img/photo2.jpg" alt="Представляем Rizor Hovertrax 4.0" height="200"/>
+                    <button class="video__play video__play--simple"><span class="visually-hidden">Смотреть видео</span>
+                      <svg class="video__play-icon video__play-icon--simple" role="img" focusable="false" width="40" height="44">
+                        <use xlink:href="#icon-play"></use>
+                      </svg>
+                    </button></a></div>
+          <figcaption class="features__text">
+            <h2 class="features__headline">Преимущества</h2>
+            <article class="product-info">
+              <h3 class="product-info__title">Дизайн</h3>
+              <p class="product-info__subtitle">Внешний вид скутера дышит идеями футуризма:</p>
+              <ul class="product-info__list">
+                <li class="product-info__spec">плавные линии</li>
+                <li class="product-info__spec">подсветка светодиодными индикаторами</li>
+                <li class="product-info__spec">рельефные бамперы, оснащенные защитными панелями</li>
+              </ul>
+            </article>
+            <article class="product-info">
+              <h3 class="product-info__title">Цвет</h3>
+              <p>Модель представлена сразу в нескольких цветах.</p>
+              <ul class="product-info__list">
+                <li>лаймовый</li>
+                <li>бирюзовый</li>
+                <li>красный</li>
+                <li>белый</li>
+                <li>черный</li>
+              </ul>
+            </article>
+          </figcaption>
+        </figure>
       </sections>
       <sections class="specs" id="specs">
         <div class="specs__wrapper container">

@@ -1,4 +1,7 @@
 .video
+  position: relative
+
+  background-image: $gradient-accent
   cursor: pointer
   &__preview
     width: 100%
@@ -8,8 +11,6 @@
 
   &__play
     position: absolute
-    top: 75px
-    left: -73px
     z-index: 3
 
     font-weight: bold
@@ -23,6 +24,17 @@
     cursor: pointer
 
     display: flex
+
+    &--simple
+      top: 50%
+      left: 50%
+
+      padding: 28px 24px
+      padding-left: 36px
+
+      background-color: rgba(255, 255, 255, 0.8)
+      border-radius: 50%
+      transform: translate(-50%, -50%)
 
     &-text
       text-align: left
@@ -39,3 +51,6 @@
       fill: $primary-accent
 
       flex-shrink: 0
+
+      &--simple
+        filter: none

@@ -1,4 +1,22 @@
 .features
+  width: 100%
+  position: relative
+  overflow: hidden
+  padding-top: 107px
+
+  &__wrapper
+    display: flex
+    justify-content: flex-end
+    min-height: 750px
+    align-items: stretch
+  &__media
+    height: 750px
+    flex: 1 0 auto
+    width: 39vw
+  &__text
+    flex: 0 0 799px
+    padding: 50px 100px
+
   &__headline
     color: $primary-accent
     @include section-headline()

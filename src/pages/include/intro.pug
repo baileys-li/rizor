@@ -1,18 +1,13 @@
 section.intro#intro
 
   figure._wrapper.container
-    svg(role="img", focusable="false", width="0", height="0")._decorative.decorative
-      use(xlink:href="#logo__gear")
-    .video(data-id="678suPK9iIc")._media
-      a(href="https://youtu.be/678suPK9iIc", target="_blank").video__link
-        img(src="img/photo1.jpg", alt="Представляем "+ title, width="215", height="150").video__preview.intro__preview
 
-        button.video__play
-          span.video__play-text!= `Смотреть <br> видео`
-          svg(role="img", focusable="false", width="66", height="72").video__play-icon
-            use(xlink:href="#icon-play")
+    +createVideo("intro", "photo1")
 
     figcaption._text
+      svg(role="img", focusable="false", width="0", height="0")._decorative.decorative
+        use(xlink:href="#logo__gear")
+
       h1._headline.arrow-anchor
         | #{product.company}<br>
         svg(width="20", height="72", role="img", focusable="false").arrow.intro__arrow
@@ -20,8 +15,6 @@ section.intro#intro
           circle(cx="17" cy="3" r="1.5").__pointer
         | #{product.line}<br>
         b.product__ver= product.ver
-
-
 
       p._subheader Маневренность, легкость, экологичность
       a(href="#features")._scroll-down Листать вниз
