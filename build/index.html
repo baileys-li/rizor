@@ -91,26 +91,99 @@
                     </button></a></div>
           <figcaption class="features__text">
             <h2 class="features__headline">Преимущества</h2>
-            <article class="product-info">
-              <h3 class="product-info__title">Дизайн</h3>
-              <p class="product-info__subtitle">Внешний вид скутера дышит идеями футуризма:</p>
-              <ul class="product-info__list">
-                <li class="product-info__spec">плавные линии</li>
-                <li class="product-info__spec">подсветка светодиодными индикаторами</li>
-                <li class="product-info__spec">рельефные бамперы, оснащенные защитными панелями</li>
-              </ul>
-            </article>
-            <article class="product-info">
-              <h3 class="product-info__title">Цвет</h3>
-              <p>Модель представлена сразу в нескольких цветах.</p>
-              <ul class="product-info__list">
-                <li>лаймовый</li>
-                <li>бирюзовый</li>
-                <li>красный</li>
-                <li>белый</li>
-                <li>черный</li>
-              </ul>
-            </article>
+            <ul class="features__specs">
+              <article class="product-info product-info--design">
+                <h3 class="product-info__title">Дизайн</h3>
+                <p class="product-info__subtitle">Внешний вид скутера дышит идеями футуризма:</p>
+                <ul class="product-info__list">
+                  <li class="product-info__spec">плавные линии</li>
+                  <li class="product-info__spec">подсветка светодиодными индикаторами</li>
+                  <li class="product-info__spec">рельефные бамперы, оснащенные защитными панелями</li>
+                </ul>
+              </article>
+              <article class="product-info product-info--color">
+                <h3 class="product-info__title">Цвет</h3>
+                <p class="product-info__subtitle">Модель представлена сразу <br> в нескольких цветах.</p>
+                <div class="slider">
+                  <form class="color-choose slider__toggles">
+                    <ul class="color-choose__list">
+                            <li class="color">
+                              <input class="color__val visually-hidden slider__toggle" id="color--lime" type="radio" name="color" value="lime"/>
+                              <label class="color__label color__label--lime" for="color--lime">лаймовый
+                                <svg class="color__icon" fill="#e2e837" width="22" height="22">
+                                  <circle cx="11" cy="11" r="10"></circle>
+                                </svg>
+                              </label>
+                            </li>
+                            <li class="color">
+                              <input class="color__val visually-hidden slider__toggle" id="color--cyan" type="radio" name="color" value="cyan"/>
+                              <label class="color__label color__label--lime" for="color--cyan">циановый
+                                <svg class="color__icon" fill="#00b6f1" width="22" height="22">
+                                  <circle cx="11" cy="11" r="10"></circle>
+                                </svg>
+                              </label>
+                            </li>
+                            <li class="color">
+                              <input class="color__val visually-hidden slider__toggle" id="color--red" type="radio" name="color" value="red"/>
+                              <label class="color__label color__label--lime" for="color--red">красный
+                                <svg class="color__icon" fill="#e23232" width="22" height="22">
+                                  <circle cx="11" cy="11" r="10"></circle>
+                                </svg>
+                              </label>
+                            </li>
+                            <li class="color">
+                              <input class="color__val visually-hidden slider__toggle" id="color--white" type="radio" name="color" value="white"/>
+                              <label class="color__label color__label--lime" for="color--white">белый
+                                <svg class="color__icon" fill="#f0efef" width="22" height="22">
+                                  <circle cx="11" cy="11" r="10"></circle>
+                                </svg>
+                              </label>
+                            </li>
+                            <li class="color">
+                              <input class="color__val visually-hidden slider__toggle" id="color--black" type="radio" name="color" value="black" checked="checked"/>
+                              <label class="color__label color__label--lime" for="color--black">черный
+                                <svg class="color__icon" fill="#0c0c0c" width="22" height="22">
+                                  <circle cx="11" cy="11" r="10"></circle>
+                                </svg>
+                              </label>
+                            </li>
+                    </ul>
+                  </form>
+                  <ul class="slider__list product-info__previews">
+                          <li class="slider__slide">
+                            <picture class="preview">
+                              <source type="image/webp" srcset="img/preview/lime@3.webp 3x, img/preview/lime@2.webp 2x,
+              img/preview/lime.webp 1x"/><img class="preview__image" src="img/preview/lime.png" srcset="img/preview/lime@3.png 3x, img/preview/lime@2.png 2x" alt="лаймовый" width="283" height="159"/>
+                            </picture>
+                          </li>
+                          <li class="slider__slide">
+                            <picture class="preview">
+                              <source type="image/webp" srcset="img/preview/cyan@3.webp 3x, img/preview/cyan@2.webp 2x,
+              img/preview/cyan.webp 1x"/><img class="preview__image" src="img/preview/cyan.png" srcset="img/preview/cyan@3.png 3x, img/preview/cyan@2.png 2x" alt="циановый" width="283" height="159"/>
+                            </picture>
+                          </li>
+                          <li class="slider__slide">
+                            <picture class="preview">
+                              <source type="image/webp" srcset="img/preview/red@3.webp 3x, img/preview/red@2.webp 2x,
+              img/preview/red.webp 1x"/><img class="preview__image" src="img/preview/red.png" srcset="img/preview/red@3.png 3x, img/preview/red@2.png 2x" alt="красный" width="283" height="159"/>
+                            </picture>
+                          </li>
+                          <li class="slider__slide">
+                            <picture class="preview">
+                              <source type="image/webp" srcset="img/preview/white@3.webp 3x, img/preview/white@2.webp 2x,
+              img/preview/white.webp 1x"/><img class="preview__image" src="img/preview/white.png" srcset="img/preview/white@3.png 3x, img/preview/white@2.png 2x" alt="белый" width="283" height="159"/>
+                            </picture>
+                          </li>
+                          <li class="slider__slide">
+                            <picture class="preview">
+                              <source type="image/webp" srcset="img/preview/black@3.webp 3x, img/preview/black@2.webp 2x,
+              img/preview/black.webp 1x"/><img class="preview__image" src="img/preview/black.png" srcset="img/preview/black@3.png 3x, img/preview/black@2.png 2x" alt="черный" width="283" height="159"/>
+                            </picture>
+                          </li>
+                  </ul>
+                </div>
+              </article>
+            </ul>
           </figcaption>
         </figure>
       </sections>
@@ -141,5 +214,6 @@
     </footer>
     <script src="js/header.js"></script>
     <script src="js/video.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
