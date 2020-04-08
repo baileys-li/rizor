@@ -1,4 +1,4 @@
-mixin createVideo(sectionName, prevPic, isSimpleButton = false, alt="Представляем "+ title, id="678suPK9iIc")
+mixin createVideo(sectionName, prevPic = sectionName, isSimpleButton = false, alt="Представляем "+ title, id="678suPK9iIc")
   .video(data-id= id, class= sectionName + "__media")
     a(href="https://youtu.be/"+id)._link
       img(src=`img/${prevPic}.jpg`, alt= alt, class= sectionName + "__preview", height="200")._preview

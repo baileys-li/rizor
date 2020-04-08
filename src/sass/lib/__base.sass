@@ -5,13 +5,16 @@
 
 html
   box-sizing: border-box
-
-  scroll-behavior: smooth
-
   width: 100vw
   max-width: 100%
+
+  font-weight: 300
+  font-size: 18px
+  line-height: 1.67
+  font-family: "Roboto", "Arial", "Helvetica", sans-serif
+
+  scroll-behavior: smooth
   @include base-colors
-  @include base-text
 
 img
   height: auto
@@ -38,6 +41,7 @@ input[type="radio"].visually-hidden
   flex-direction: column
 
 .container
+  display: flex
   width: 100%
   max-width: $container-width
   margin: 0 auto
@@ -54,6 +58,27 @@ input[type="radio"].visually-hidden
   box-shadow: 0px 5px 5px 0 rgba(0, 0, 1, 0.2)
   border-radius: 3em
   @include accent-colors
+
+.headline
+  font-size: 80px
+  line-height: 1.2
+  font-family: $headline-fonts
+  text-transform: uppercase
+  letter-spacing: 6.4px
+
+.subheadline
+  font-weight: bold
+  font-size: 20px
+  line-height: 1.5
+  text-transform: uppercase
+  letter-spacing: 1.6px
+
+.section-name
+  font-size: 20px
+  font-weight: bold
+  line-height: 4
+  letter-spacing: 1.6px
+  text-transform: uppercase
 
 .product__ver
   letter-spacing: -12px
