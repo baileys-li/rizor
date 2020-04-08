@@ -16,25 +16,25 @@ sections.features#features
             li._spec подсветка светодиодными индикаторами
             li._spec рельефные бамперы, оснащенные защитными панелями
 
-        article.product-info.-color
-          h3._title Цвет
-          p._subtitle Модель представлена сразу <br> в нескольких цветах.
+        article.product-info.-color.slider
+          form.color-choose
+            legend.product-info__title Цвет
+            p.product-info__subtitle Модель представлена сразу <br> в нескольких цветах.
 
-          .slider
-            form.color-choose.slider__toggles
-              ul._list
-                +createColor("lime", "лаймовый", "#e2e837")
-                +createColor("cyan", "циановый", "#00b6f1")
-                +createColor("red", "красный", "#e23232")
-                +createColor("white", "белый", "#f0efef")
-                +createColor("black", "черный", "#0c0c0c", isChecked = true)
+            ul._list.slider__toggles
+              +createColor("lime", "лаймовый", "#e2e837", isChecked = true)
+              +createColor("cyan", "циановый", "#00b6f1")
+              +createColor("red", "красный", "#e23232")
+              +createColor("white", "белый", "#f0efef")
+              +createColor("black", "черный", "#0c0c0c")
 
-            ul._list.product-info__previews
-              +createPreview("lime", "лаймовый")
-              +createPreview("cyan", "циановый")
-              +createPreview("red", "красный")
-              +createPreview("white", "белый")
-              +createPreview("black", "черный")
+          ._background
+          ul.slider__list.__previews
+            +createPreview("lime", "лаймовый")
+            +createPreview("cyan", "циановый")
+            +createPreview("red", "красный")
+            +createPreview("white", "белый")
+            +createPreview("black", "черный")
 
 
 
