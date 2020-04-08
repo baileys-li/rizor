@@ -1,5 +1,36 @@
 .for-whom
   min-height: 790px
-  @include accent-colors--invert
+  padding-top: 117px
+  overflow: hidden
 
-  &__headline
+  &__wrapper
+    width: 100%
+    min-height: 790px
+    @include accent-colors--invert
+
+  &__media
+    order: 2
+    display: block
+    background: $gradient-accent
+    flex: 1 0 auto
+    width: 63.4vw
+    height: 750px
+    position: relative
+    top: -60px
+
+  &__image
+    height: 100%
+    width: 100%
+    object-fit: cover
+    object-position: left bottom
+
+  &__text
+    flex: 0 0 31.6%
+    padding-top: 52px
+    padding-right: 20px
+
+  &__message
+    margin: 50px 0 21px
+
+  &__button
+    margin-top: 74px

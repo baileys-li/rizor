@@ -356,17 +356,21 @@ input[type="radio"].visually-hidden {
   padding: 0 15px; }
 
 .button {
-  text-decoration: none;
+  display: inline-block;
+  padding: 11px 43px;
+  font-weight: bold;
   font-size: 16px;
-  letter-spacing: 1.28px;
   line-height: 1.88;
   text-transform: uppercase;
-  font-weight: bold;
-  padding: 18px 45px;
-  box-shadow: 0px 5px 5px 0 rgba(0, 0, 1, 0.2);
+  text-decoration: none;
+  letter-spacing: 1.28px;
   border-radius: 3em;
-  color: #3a30f8;
-  background-color: #ffffff; }
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 1, 0.2);
+  color: #ffffff;
+  background-color: #3a30f8; }
+  .button--invert {
+    color: #3a30f8;
+    background-color: #ffffff; }
 
 .headline {
   font-size: 80px;
@@ -587,7 +591,8 @@ input[type="radio"].visually-hidden {
 
 .specs {
   margin-top: 189px;
-  padding: 64px 0; }
+  padding: 64px 0;
+  overflow: hidden; }
   .specs__media {
     flex: 1 0 auto;
     order: 1;
@@ -603,8 +608,37 @@ input[type="radio"].visually-hidden {
 
 .for-whom {
   min-height: 790px;
-  color: #ffffff;
-  background-color: #3a30f8; }
+  padding-top: 117px;
+  overflow: hidden; }
+  .for-whom__wrapper {
+    width: 100%;
+    min-height: 790px;
+    color: #ffffff;
+    background-color: #3a30f8; }
+  .for-whom__media {
+    order: 2;
+    display: block;
+    background: linear-gradient(to top, #3a30f8, #8330c6);
+    flex: 1 0 auto;
+    width: 63.4vw;
+    height: 750px;
+    position: relative;
+    top: -60px; }
+  .for-whom__image {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: left bottom;
+    object-position: left bottom; }
+  .for-whom__text {
+    flex: 0 0 31.6%;
+    padding-top: 52px;
+    padding-right: 20px; }
+  .for-whom__message {
+    margin: 50px 0 21px; }
+  .for-whom__button {
+    margin-top: 74px; }
 
 .product-info--design {
   flex: 0 0 300px;

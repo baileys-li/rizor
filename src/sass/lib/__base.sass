@@ -48,16 +48,22 @@ input[type="radio"].visually-hidden
   padding: 0 $container-padding
 
 .button
-  text-decoration: none
+  display: inline-block
+  padding: 11px 43px
+
+  font-weight: bold
   font-size: 16px
-  letter-spacing: 1.28px
   line-height: 1.88
   text-transform: uppercase
-  font-weight: bold
-  padding: 18px 45px
-  box-shadow: 0px 5px 5px 0 rgba(0, 0, 1, 0.2)
+  text-decoration: none
+  letter-spacing: 1.28px
+
   border-radius: 3em
-  @include accent-colors
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 1, 0.2)
+
+  @include accent-colors--invert
+  &--invert
+    @include accent-colors
 
 .headline
   font-size: 80px

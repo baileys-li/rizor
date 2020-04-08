@@ -1,9 +1,14 @@
 section.for-whom#for-whom
-  figure._wrapper.container
-    img(src="", alt="alt")
-    figcaption
-      h2._headline.section-name Для кого
+  ._wrapper
+    figure._content.container
+      picture._media
+        img(src="img/photo3.jpg", alt="Целевая аудитория", width="590", height="376")._image
+      figcaption._text
+        h2._title.section-name Для кого
 
-      p При максимально выдерживаемой нагрузке в 100 кг отлично подойдёт, как для подрастающего поколения, так и для более взрослых «наездников». Это единственный гироскутер со специальным детским режимом езды.
+        p._message= "При максимально выдерживаемой нагрузке в "
+          b.strong= "100 кг "
+          | отлично подойдёт, <br> как для подрастающего поколения, <br> так и для более взрослых «наездников».
+        p Это единственный гироскутер со специальным детским режимом <br> езды.
 
-      a(href="/catalogue")._button.button Перейти в каталог
+        a(href="/catalogue")._button.button.button--invert Перейти в каталог
