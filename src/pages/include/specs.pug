@@ -3,13 +3,26 @@ sections.specs#specs
 
     +createVideo("specs", "specs", isSimpleButton = false, alt="Представляем "+ title, id="Ryaj7_Vm16E")
     ficaption._text
-      h2._headline.section-name Характеристики
-      article.product-info
+      h2._headline.section-name.visually-hidden Характеристики
+      article.product-info.-modes
         h3._title Режимы
-        p Помимо «умной» подсветки, Hovertrax 4.0 снабжён двумя скоростными режимами.
-        ul._list
-          li._spec Один для продвинутых пользователей
-          li._spec  Второй для новичков
+        p._subtitle.-modes= "Помимо «умной» подсветки, "
+          b.strong!= `${product.line} ${product.ver} <br>`
+          | снабжён двумя скоростными режимами.
+        ul._list.-mods
+          li._spec.-mods Один для продвинутых пользователей
+          li._spec.-mods Второй для новичков
 
-        p 13 км/ч Максимальная скорость
-        p 2 Скоростных режима
+
+        table.table._table
+          thead._head
+            tr
+              th._headline Максимальная <br> скорость
+              th._headline Скоростных <br>  режима
+
+          tbody._body
+            tr
+              td._value 13
+                i._units км/ч
+
+              td._value 2

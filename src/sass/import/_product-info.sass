@@ -11,13 +11,19 @@
 
   &__title
     margin: 0 0 14px
-    @include category-title
+    font-family: $headline-fonts
+    font-size: 40px
+    letter-spacing: 3.2px
   &__subtitle
     margin: 0 0 21px
+    &--modes
+      padding: 0 2px
 
   &__list
     list-style: none
     padding-left: 42px
+    &--mods
+      padding-left: 46px
 
   &__spec
     position: relative
@@ -33,8 +39,16 @@
 
       background-color: $primary-foreground
 
+    &--mods::before
+      top: 11px
+      left: -41px
+
   &__previews
     width: 370px
     height: 300px
     position: relative
     left: -103px
+
+  &__table
+    margin-top: 67px
+    width: 79%

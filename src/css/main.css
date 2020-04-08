@@ -389,6 +389,9 @@ input[type="radio"].visually-hidden {
   letter-spacing: 1.6px;
   text-transform: uppercase; }
 
+.strong {
+  font-weight: bold; }
+
 .product__ver {
   letter-spacing: -12px; }
 
@@ -585,8 +588,18 @@ input[type="radio"].visually-hidden {
 .specs {
   margin-top: 189px;
   padding: 64px 0; }
-  .specs__headline {
-    color: #3a30f8; }
+  .specs__media {
+    flex: 1 0 auto;
+    order: 1;
+    width: 57vw;
+    height: 750px; }
+  .specs__text {
+    flex: 0 0 475px;
+    max-width: 475px;
+    padding-top: 73px; }
+  .specs__play {
+    bottom: 80px;
+    left: -61px; }
 
 .for-whom {
   min-height: 790px;
@@ -611,10 +624,14 @@ input[type="radio"].visually-hidden {
 
 .product-info__subtitle {
   margin: 0 0 21px; }
+  .product-info__subtitle--modes {
+    padding: 0 2px; }
 
 .product-info__list {
   list-style: none;
   padding-left: 42px; }
+  .product-info__list--mods {
+    padding-left: 46px; }
 
 .product-info__spec {
   position: relative;
@@ -627,12 +644,19 @@ input[type="radio"].visually-hidden {
     width: 30px;
     height: 5px;
     background-color: #000000; }
+  .product-info__spec--mods::before {
+    top: 11px;
+    left: -41px; }
 
 .product-info__previews {
   width: 370px;
   height: 300px;
   position: relative;
   left: -103px; }
+
+.product-info__table {
+  margin-top: 67px;
+  width: 79%; }
 
 .color-choose__list {
   display: flex;
@@ -689,6 +713,27 @@ input[type="radio"].visually-hidden {
   scroll-snap-align: start; }
   .slider__slide:last-child {
     margin-right: 0; }
+
+.table__head {
+  display: table-footer-group;
+  text-align: left; }
+
+.table__headline {
+  font-size: 16px;
+  font-weight: 300;
+  color: #666666; }
+
+.table__value {
+  font-size: 60px;
+  letter-spacing: -4.2px;
+  line-height: 1.2;
+  color: #3a30f8;
+  font-family: "Rubik Mono One", "Arial Black", sans-serif; }
+
+.table__units {
+  font-size: 24px;
+  letter-spacing: -1.68px;
+  font-style: normal; }
 
 .video {
   position: relative;
