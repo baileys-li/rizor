@@ -1,34 +1,41 @@
 .side-nav
   position: fixed
-  right: 92px
-  padding: 85px 0
-  height: 100%
   top: 0
-  transform: translateX(-50%)
+  right: 92px
   z-index: 4
+
+  height: 100%
+  min-height: 600px
+  padding: 85px 0
+
+  transform: translateX(-50%)
   &__list
     display: flex
     flex-direction: column
+    justify-content: space-between
     align-items: center
     height: 100%
-    justify-content: space-between
 
     @include reset-list
     &::before,
     &::after
       content: ""
+
       display: block
       width: 2px
       height: 28vh
+
       background-color: $primary-accent
   &__link
-    font-size: 0
     display: block
-    border-radius: 50%
+
+    font-size: 0
+
     background-color: $primary-accent
-    mix-blend-mode: difference
+    border-radius: 50%
+
     @include rect(8px)
     &--current
-      transform: scale(1.875)
       background-color: transparent
       border: 2px solid $primary-accent
+      transform: scale(1.875)
