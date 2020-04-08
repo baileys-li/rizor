@@ -816,6 +816,42 @@ input[type="radio"].visually-hidden {
         -webkit-filter: none;
         filter: none; }
 
+.side-nav {
+  position: fixed;
+  right: 92px;
+  padding: 85px 0;
+  height: 100%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 4; }
+  .side-nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .side-nav__list::before, .side-nav__list::after {
+      content: "";
+      display: block;
+      width: 2px;
+      height: 28vh;
+      background-color: #3a30f8; }
+  .side-nav__link {
+    font-size: 0;
+    display: block;
+    border-radius: 50%;
+    background-color: #3a30f8;
+    mix-blend-mode: difference;
+    width: 8px;
+    height: 8px; }
+    .side-nav__link--current {
+      transform: scale(1.875);
+      background-color: transparent;
+      border: 2px solid #3a30f8; }
+
 .page-footer {
   background: #292929;
   height: 28px; }
