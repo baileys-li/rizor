@@ -13,3 +13,24 @@ mixin createVideo(sectionName, prevPic, isSimpleButton = false, alt="Предс�
           span._play-text!= `Смотреть <br> видео`
           svg(role="img", focusable="false", width="66", height="72")._play-icon
             use(xlink:href="#icon-play")
+
+
+mixin createColor(id, text, color, isChecked = false)
+  li.color
+    label(for="color--" + id)._label.-lime= text
+      svg(fill=color, width="20", height="20")
+        circle(cx="10", cy="10", r="10")
+    if isChecked
+      input(id="color--" + id, type="radio", name="color", value=id, checked)._val
+    else
+      input(id="color--" + id, type="radio", name="color", value=id)._val
+
+mixin createPreview(fileName, alt)
+  li.slider__slide
+    picture.preview
+      source(type=`image/webp`,
+              srcset=`img/preview/${fileName}@3.webp 3x, img/preview/${fileName}@2.webp 2x,
+              img/preview/${fileName}.webp 1x`)
+      img(src=`img/preview/${fileName}.png`,
+          srcset=`img/preview/${fileName}@3.png 3x, img/preview/${fileName}@2.png 2x`,
+          alt= alt, width="283", height="159")._image
