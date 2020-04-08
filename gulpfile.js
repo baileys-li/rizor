@@ -7,6 +7,7 @@ const gulp = require("gulp"),
   autoprefixer = require("gulp-autoprefixer"),
   pug = require("gulp-pug"),
   pugbem = require("gulp-pugbem"),
+  imagemin = require("gulp-imagemin")
   browserSync = require("browser-sync").create(),
   reload = browserSync.reload;
 
@@ -29,6 +30,11 @@ const paths = {
   css: {
     src: srcBase + "css/**/*.css",
     dest: destBase + "css/",
+  },
+
+  images: {
+    src: srcBase + "img/**/*",
+    dest: destBase + "img/",
   },
 };
 
@@ -71,6 +77,25 @@ gulp.task("css", () =>
     )
     .pipe(gulp.dest(paths.css.dest))
 );
+
+gulp.task("images", () =>
+  gulp
+    .src(paths.images.src)
+    .pipe(
+      imagemin([
+        imagemin.optipng({
+          optimizationLevel: 3,
+        }),
+        imagemin.mozjpeg({
+          progressive: true,
+          quality: 75,
+        }),
+        imagemin.svgo(),
+      ])
+    )
+    .pipe(gulp.dest(paths.images.dest))
+);
+
 
 // * Watchers, Browser Sync
 
