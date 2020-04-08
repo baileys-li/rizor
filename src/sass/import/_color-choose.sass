@@ -1,0 +1,29 @@
+.color-choose
+  &__list
+    display: flex
+    width: 270px
+    justify-content: space-around
+    list-style: none
+    padding: 0 5px
+    margin: 55px 0 30px
+
+.color
+  font-size: 0
+  &__val:checked ~ &__label &__icon
+    stroke: $primary-accent
+
+.preview
+  height: 100%
+  width: 270px
+  margin-left: 105px
+  display: flex
+  align-items: center
+  background: url(../img/pattern.png)
+
+  &__image
+    max-width: none
+    position: relative
+    left: -100px
+    height: auto
+    width: 327px
+    top: 12px

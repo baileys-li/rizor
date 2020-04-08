@@ -1,18 +1,40 @@
 .product-info
+  &--design
+    flex: 0 0 300px
+    margin-right: $container-padding * 2 // 30px
+  &--color
+    position: relative
+    top: 265px
+    flex-direction: column
+    // display: flex
+    width: 271px
+
   &__title
+    margin: 0 0 14px
     @include category-title
+  &__subtitle
+    margin: 0 0 21px
 
   &__list
     list-style: none
+    padding-left: 42px
 
   &__spec
     position: relative
-    // display: flex
-  &__spec::before
-    position: absolute
-    content: ""
-    background-color: $primary-foreground
-    width: 30px
-    height: 5px
-    left: -35px
-    top: 10px
+    margin: 0 0 21px
+    &::before
+      content: ""
+      position: absolute
+      top: 13px
+      left: -44px
+
+      width: 30px
+      height: 5px
+
+      background-color: $primary-foreground
+
+  &__previews
+    width: 370px
+    height: 300px
+    position: relative
+    left: -103px

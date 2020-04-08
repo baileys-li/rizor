@@ -15,8 +15,15 @@
     width: 39vw
   &__text
     flex: 0 0 799px
-    padding: 50px 100px
+    padding: 50px 0 252px
+    padding-left: 100px
+
+  &__specs
+    display: flex
+    justify-content: space-between
+    @include reset-list
 
   &__headline
     color: $primary-accent
+    margin-bottom: 41px
     @include section-headline()

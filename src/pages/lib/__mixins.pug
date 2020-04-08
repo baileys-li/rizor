@@ -17,13 +17,14 @@ mixin createVideo(sectionName, prevPic, isSimpleButton = false, alt="Предс�
 
 mixin createColor(id, text, color, isChecked = false)
   li.color
-    label(for="color--" + id)._label.-lime= text
-      svg(fill=color, width="20", height="20")
-        circle(cx="10", cy="10", r="10")
     if isChecked
-      input(id="color--" + id, type="radio", name="color", value=id, checked)._val
+      input(id="color--" + id, type="radio", name="color", value=id, checked)._val.visually-hidden.slider__toggle
     else
-      input(id="color--" + id, type="radio", name="color", value=id)._val
+      input(id="color--" + id, type="radio", name="color", value=id)._val.visually-hidden.slider__toggle
+    label(for="color--" + id)._label.-lime= text
+      svg(fill=color, width="22", height="22")._icon
+        circle(cx="11", cy="11", r="10")
+
 
 mixin createPreview(fileName, alt)
   li.slider__slide
