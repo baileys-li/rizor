@@ -7,7 +7,7 @@ const gulp = require("gulp"),
   autoprefixer = require("gulp-autoprefixer"),
   pug = require("gulp-pug"),
   pugbem = require("gulp-pugbem"),
-  imagemin = require("gulp-imagemin")
+  imagemin = require("gulp-imagemin"),
   browserSync = require("browser-sync").create(),
   reload = browserSync.reload;
 
@@ -95,7 +95,6 @@ gulp.task("images", () =>
     )
     .pipe(gulp.dest(paths.images.dest))
 );
-
 
 // * Watchers, Browser Sync
 
