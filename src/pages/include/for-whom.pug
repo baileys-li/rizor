@@ -4,7 +4,11 @@ section.for-whom#for-whom
       svg(role="img", focusable="false", width="0", height="0")._decorative.decorative
         use(xlink:href="#logo__gear")
 
-      picture._media
+      ._media
+        p._media-decorative.decorative.headline
+          span.product__ver= product.ver
+          <br>
+          | #{product.company}
         img(src="img/photo3.jpg", alt="Целевая аудитория", width="590", height="376")._image
 
       figcaption._text

@@ -680,7 +680,7 @@ input[type="radio"].visually-hidden {
     height: 750px; }
   .features__text {
     flex: 0 0 68.35%;
-    padding: 50px 0 252px;
+    padding: 50px 0 0;
     padding-left: 100px; }
   .features__specs {
     display: flex;
@@ -754,7 +754,7 @@ input[type="radio"].visually-hidden {
       width: 50%; } }
 
 .specs {
-  margin-top: 174px;
+  margin-top: 176px;
   padding: 64px 0;
   overflow: hidden; }
   .specs__wrapper {
@@ -800,7 +800,19 @@ input[type="radio"].visually-hidden {
     order: 2;
     width: 63.4vw;
     height: 750px;
-    background: linear-gradient(to top, #3a30f8, #8330c6); }
+    background: linear-gradient(to top, #3a30f8, #8330c6);
+    overflow: hidden; }
+  .for-whom__media-decorative {
+    font-size: 10.31rem;
+    line-height: 0.985;
+    color: rgba(255, 255, 255, 0.502);
+    margin: 0;
+    bottom: -7%;
+    left: -3%;
+    text-align: right; }
+    .for-whom__media-decorative .product__ver {
+      letter-spacing: -0.25em;
+      margin-right: 64px; }
   .for-whom__image {
     width: 100%;
     height: 100%;
