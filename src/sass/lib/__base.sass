@@ -96,12 +96,12 @@ input[type="radio"].visually-hidden
   position: absolute
   fill: $secondary-light
 
-.arrow-anchor
+.pointer-anchor
   position: relative
-.arrow
-  fill: none
+.pointer
   position: absolute
+  z-index: -1
   &__line
-    stroke: #CDCDCD
-  &__pointer
-    fill: #CDCDCD
+    stroke: $pointer-color
+  &__point
+    fill: $pointer-color

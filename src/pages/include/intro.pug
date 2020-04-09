@@ -8,11 +8,9 @@ section.intro#intro
       svg(role="img", focusable="false", width="0", height="0")._decorative.decorative
         use(xlink:href="#logo__gear")
 
-      h1._title.arrow-anchor.headline
+      h1._title.pointer-anchor.headline
         | #{product.company}<br>
-        svg(width="20", height="72", role="img", focusable="false").arrow.intro__arrow
-          polyline(points="0,71 17,71 17,3", stroke-width="1").__line
-          circle(cx="17" cy="3" r="1.5").__pointer
+        +drawPointer("20", "72", "intro", "0,71 17,71 17,3", "17", "3")
         | #{product.line}<br>
         b.product__ver= product.ver
 

@@ -5,13 +5,14 @@ sections.specs#specs
     ficaption._text
       h2._headline.section-name.visually-hidden Характеристики
       article.product-info.-modes
-        h3._title Режимы
+        h3._title.pointer-anchor Режимы
+          +drawPointer("158", "474", "specs", "0,1 156,1 156,472", "156", "472")
         p._subtitle.-modes= "Помимо «умной» подсветки, "
           b.strong!= `${product.line} ${product.ver} <br>`
           | снабжён двумя скоростными режимами.
-        ul._list.-mods
-          li._spec.-mods Один для продвинутых пользователей
-          li._spec.-mods Второй для новичков
+        ul._list.-modes
+          li._spec.-modes Один для продвинутых пользователей
+          li._spec.-modes Второй для новичков
 
 
         table.table._table
