@@ -70,31 +70,37 @@ input[type="radio"].visually-hidden
     @include accent-colors
 
 .headline
-  font-size: 80px
+  font-size: 4.44em // 80px
   line-height: 1.2
   font-family: $headline-fonts
   text-transform: uppercase
-  letter-spacing: 6.4px
+  letter-spacing: 0.08em
+  @media screen and (max-width: 700px)
+    font-size: 3em
+  @media screen and (max-width: 600px)
+    font-size: 1.6em
 
 .subheadline
   font-weight: bold
-  font-size: 20px
+  font-size: 1.111em // 20px
   line-height: 1.5
   text-transform: uppercase
-  letter-spacing: 1.6px
+  letter-spacing: 0.08em //1.6
+  @media screen and (max-width: 700px)
+    font-size: 1.05em
 
 .section-name
-  font-size: 20px
+  font-size: 1.111em
   font-weight: bold
   line-height: 4
-  letter-spacing: 1.6px
+  letter-spacing: 0.08em //1.6
   text-transform: uppercase
 
 .strong
   font-weight: bold
 
 .product__ver
-  letter-spacing: -12px
+  letter-spacing: -0.15em
 
 .decorative
   position: absolute

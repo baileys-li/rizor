@@ -7,6 +7,7 @@
 
   &__wrapper
     min-height: 750px
+    position: relative
 
   &__media
     flex: 1 0 auto
@@ -30,36 +31,72 @@
     margin: 0
 
   &__scroll-down
-    display: block
+    display: inline-flex
+    align-items: center
     width: 100%
     margin-top: 32px
     padding-left: 30px
 
+    font-weight: 300
     font-size: 0
+    text-transform: uppercase
+    text-decoration: none
+    letter-spacing: 0.2em
+
+    transition: all 0.5s
     @include colorize-text-icon($primary-accent)
 
     &:hover,
     &:focus
-      @include colorize-text-icon($secondary-accent)
-      & svg
-        transform: scale(1.2)
-        transition: transform 0.5s
+      font-size: 1.2em
+    &:hover &-arrow,
+    &:focus &-arrow
+      transform: scale(1.2)
+      transition: transform 0.5s
+      margin-left: 20px
 
     &:focus
       outline: none
 
   &__decorative
-    top: -6%
-    left: -158%
+    top: -13%
+    left: -60%
     z-index: -1
 
-    width: 900px
-    height: 121%
+    width: 891px
+    height: 136%
 
   &__pointer
     right: 57px
     top: -31px
 
   &__play
-    top: 75px
-    left: -73px
+    top: 10%
+    left: -8.5%
+
+@media screen and (max-width: 1100px)
+  .intro
+    &__wrapper
+      flex-direction: column
+      align-items: flex-end
+      min-height: auto
+
+    &__media
+      order: 0
+      width: 80vw
+      height: auto
+
+    &__text
+      align-self: flex-start
+      padding-top: 0
+      margin-top: -14%
+    &__pointer
+      display: none
+
+    &__decorative
+      height: 100%
+      left: -40%
+      top: 0%
+
+// @media screen and (max-width: 700px)
+// @media screen and (max-width: 600px)

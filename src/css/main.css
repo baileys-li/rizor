@@ -377,31 +377,40 @@ input[type="radio"].visually-hidden {
     background-color: #ffffff; }
 
 .headline {
-  font-size: 80px;
+  font-size: 4.44em;
   line-height: 1.2;
   font-family: "Rubik Mono One", "Arial Black", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 6.4px; }
+  letter-spacing: 0.08em; }
+  @media screen and (max-width: 700px) {
+    .headline {
+      font-size: 3em; } }
+  @media screen and (max-width: 600px) {
+    .headline {
+      font-size: 1.6em; } }
 
 .subheadline {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.111em;
   line-height: 1.5;
   text-transform: uppercase;
-  letter-spacing: 1.6px; }
+  letter-spacing: 0.08em; }
+  @media screen and (max-width: 700px) {
+    .subheadline {
+      font-size: 1.05em; } }
 
 .section-name {
-  font-size: 20px;
+  font-size: 1.111em;
   font-weight: bold;
   line-height: 4;
-  letter-spacing: 1.6px;
+  letter-spacing: 0.08em;
   text-transform: uppercase; }
 
 .strong {
   font-weight: bold; }
 
 .product__ver {
-  letter-spacing: -12px; }
+  letter-spacing: -0.15em; }
 
 .decorative {
   position: absolute;
@@ -578,7 +587,8 @@ input[type="radio"].visually-hidden {
   padding: 35px 0 93px;
   overflow: hidden; }
   .intro__wrapper {
-    min-height: 750px; }
+    min-height: 750px;
+    position: relative; }
   .intro__media {
     flex: 1 0 auto;
     order: 1;
@@ -597,33 +607,60 @@ input[type="radio"].visually-hidden {
   .intro__title {
     margin: 0; }
   .intro__scroll-down {
-    display: block;
+    display: inline-flex;
+    align-items: center;
     width: 100%;
     margin-top: 32px;
     padding-left: 30px;
+    font-weight: 300;
     font-size: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+    transition: all 0.5s;
     color: #3a30f8;
     fill: #3a30f8; }
     .intro__scroll-down:hover, .intro__scroll-down:focus {
-      color: #8330c6;
-      fill: #8330c6; }
-      .intro__scroll-down:hover svg, .intro__scroll-down:focus svg {
-        transform: scale(1.2);
-        transition: transform 0.5s; }
+      font-size: 1.2em; }
+    .intro__scroll-down:hover .intro__scroll-down-arrow,
+    .intro__scroll-down:focus .intro__scroll-down-arrow {
+      transform: scale(1.2);
+      transition: transform 0.5s;
+      margin-left: 20px; }
     .intro__scroll-down:focus {
       outline: none; }
   .intro__decorative {
-    top: -6%;
-    left: -158%;
+    top: -13%;
+    left: -60%;
     z-index: -1;
-    width: 900px;
-    height: 121%; }
+    width: 891px;
+    height: 136%; }
   .intro__pointer {
     right: 57px;
     top: -31px; }
   .intro__play {
-    top: 75px;
-    left: -73px; }
+    top: 10%;
+    left: -8.5%; }
+
+@media screen and (max-width: 1100px) {
+  .intro__wrapper {
+    flex-direction: column;
+    align-items: flex-end;
+    min-height: auto; }
+  .intro__media {
+    order: 0;
+    width: 80vw;
+    height: auto; }
+  .intro__text {
+    align-self: flex-start;
+    padding-top: 0;
+    margin-top: -14%; }
+  .intro__pointer {
+    display: none; }
+  .intro__decorative {
+    height: 100%;
+    left: -40%;
+    top: 0%; } }
 
 .features {
   width: 100%;
@@ -904,11 +941,20 @@ input[type="radio"].visually-hidden {
     font-size: 12px;
     line-height: 1.2;
     text-transform: uppercase;
-    text-transform: uppercase;
     background: none;
     border: none;
     cursor: pointer;
     display: flex; }
+    .video__play:focus {
+      outline: none; }
+    .video__play:hover, .video__play:focus {
+      transform: scale(1.1);
+      color: #3a30f8; }
+    .video__play:hover .video__play-icon,
+    .video__play:focus .video__play-icon {
+      fill: #ffffff;
+      -webkit-filter: drop-shadow(0 0 5px #3a30f8);
+      filter: drop-shadow(0 0 5px #3a30f8); }
     .video__play--simple {
       top: 50%;
       left: 50%;
@@ -934,6 +980,23 @@ input[type="radio"].visually-hidden {
       .video__play-icon--simple {
         -webkit-filter: none;
         filter: none; }
+  @media screen and (max-width: 1100px) {
+    .video {
+      display: flex;
+      min-height: 500px; }
+      .video__link {
+        display: flex; }
+      .video__preview {
+        height: auto;
+        z-index: 0; } }
+  @media screen and (max-width: 700px) {
+    .video {
+      min-height: 250px; }
+      .video__play-text {
+        font-size: 0; }
+      .video__play-icon {
+        height: 42px;
+        width: auto; } }
 
 .side-nav {
   position: fixed;
