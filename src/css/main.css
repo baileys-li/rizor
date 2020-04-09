@@ -906,8 +906,8 @@ input[type="radio"].visually-hidden {
     height: 8px; }
     .side-nav__link--current {
       background-color: transparent;
-      border: 2px solid #3a30f8;
-      transform: scale(1.875); }
+      box-shadow: 0 0 0 1px #3a30f8;
+      transform: scale(1.625); }
 
 .page-footer {
   background: #292929;

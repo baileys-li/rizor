@@ -37,5 +37,5 @@
     @include rect(8px)
     &--current
       background-color: transparent
-      border: 2px solid $primary-accent
-      transform: scale(1.875)
+      box-shadow: 0 0 0 1px $primary-accent  // box shadow because border will be cliped
+      transform: scale(1.625)
