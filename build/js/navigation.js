@@ -5,6 +5,8 @@ const header = document.querySelector(".page-header"),
   mainNavList = header.querySelector(".main-nav__list"),
   mainNavLinks = mainNavList.querySelectorAll(".main-nav__link");
 
+const pageMain = document.querySelector(".page-main");
+
 const sideNav = document.querySelector(".side-nav"),
   sideNavLinks = sideNav.querySelectorAll(".side-nav__link");
 
@@ -13,20 +15,28 @@ changeElementNotOnTop(header, "shrink");
 activeNavLinkOnScroll(mainNavLinks, "current");
 activeNavLinkOnScroll(sideNavLinks, "current");
 
-setupHamburgerMenu(toggle, mainNavList);
+setupHamburgerMenu(toggle, mainNavList, pageMain, header);
 
 function setupHamburgerMenu(
   toggle,
   nav,
+  main,
+  head,
   modForToggle = "open",
-  modForNav = "show"
+  modForNav = "show",
+  modForHead = "shifted",
+  modForMain = modForHead
 ) {
   const toggleOpenClass = createModifiedClass(toggle, modForToggle),
-    navOpenClass = createModifiedClass(nav, modForNav);
+    navOpenClass = createModifiedClass(nav, modForNav),
+    headOpenClass = createModifiedClass(head, modForHead),
+    mainOpenClass = createModifiedClass(main, modForMain);
 
   toggle.onclick = () => {
     toggle.classList.toggle(toggleOpenClass);
     nav.classList.toggle(navOpenClass);
+    head.classList.toggle(headOpenClass);
+    main.classList.toggle(mainOpenClass);
   };
 }
 

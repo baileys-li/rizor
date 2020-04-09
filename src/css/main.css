@@ -347,6 +347,10 @@ input[type="radio"].visually-hidden {
 .page-main {
   display: flex;
   flex-direction: column; }
+  @media screen and (max-width: 700px) {
+    .page-main--shifted {
+      position: relative;
+      left: 80vw; } }
 
 .container {
   display: flex;
@@ -414,6 +418,18 @@ input[type="radio"].visually-hidden {
   .pointer__point {
     fill: #cdcdcd; }
 
+@-webkit-keyframes slideFromLeft {
+  0% {
+    left: -80vw; }
+  0% {
+    left: 0; } }
+
+@keyframes slideFromLeft {
+  0% {
+    left: -80vw; }
+  0% {
+    left: 0; } }
+
 /** Blocks **/
 .page-header {
   position: fixed;
@@ -430,7 +446,9 @@ input[type="radio"].visually-hidden {
 
 @media screen and (max-width: 700px) {
   .page-header {
-    padding: 10px 0; } }
+    padding: 5px 0; }
+    .page-header--shifted {
+      left: 80vw; } }
 
 .main-nav {
   justify-content: space-between;
@@ -459,19 +477,21 @@ input[type="radio"].visually-hidden {
       content: "";
       position: absolute;
       bottom: -3px;
+      left: 0;
+      width: 0;
       height: 1px;
       background-color: #3a30f8;
-      transition: all 0.8s ease-out 0.5s; }
+      transition: all 0.5s ease-out; }
     .main-nav__link--current::before {
       left: -10px;
       width: 20px; }
     .main-nav__link:hover, .main-nav__link:focus {
       color: #3a30f8; }
       .main-nav__link:hover::before, .main-nav__link:focus::before {
-        left: 0;
-        width: 40%; }
-      .main-nav__link:hover:active::before, .main-nav__link:focus:active::before {
-        width: 100%; }
+        width: 80%; }
+    .main-nav__link:active {
+      color: #8330c6;
+      transition: color 0.1 linear 0.5; }
     .main-nav__link:focus {
       outline: none; }
 
@@ -487,27 +507,69 @@ input[type="radio"].visually-hidden {
   .main-nav {
     justify-content: start;
     position: relative;
-    background-color: #35ff028c; }
+    padding: 4px;
+    align-items: center; }
     .main-nav__logo {
       order: 1;
       margin: 0 auto; }
     .main-nav__list {
-      position: absolute;
+      position: fixed;
       left: 0;
       display: none;
       flex-direction: column;
       justify-content: start;
-      width: 100%;
-      top: 100%;
-      height: 120vh;
-      padding: 30px 20px;
-      background-color: rgba(255, 255, 255, 0.8); }
+      width: 80vw;
+      top: 0;
+      height: 100vh;
+      padding: 20vh 20px;
+      justify-content: space-evenly;
+      background-color: #3a30f8;
+      box-shadow: inset -4px 0 20px 0 rgba(0, 0, 0, 0.5); }
       .main-nav__list--show {
-        display: flex; }
+        display: flex;
+        -webkit-animation: slideFromLeft 0.5s ease-in-out 0.1s  forwards;
+        animation: slideFromLeft 0.5s ease-in-out 0.1s  forwards; }
+    .main-nav__link {
+      color: #ffffff;
+      font-size: 1.2em; }
+      .main-nav__link:focus, .main-nav__link:hover, .main-nav__link:active {
+        transform: scale(1.2); }
+      .main-nav__link::before {
+        background-color: #ffffff; }
     .main-nav__toggle {
       display: block;
       background-color: transparent;
-      border: none; } }
+      border: none;
+      outline: none; }
+      .main-nav__toggle:hover, .main-nav__toggle:focus {
+        fill: #3a30f8; }
+      .main-nav__toggle--open {
+        transform: rotate(180deg);
+        transition: transform 0.5s ease-in-out 0.2; } }
+
+.logo {
+  display: flex;
+  align-items: center; }
+  .logo:focus {
+    outline: none; }
+  .logo__img, .logo__text {
+    fill: inherit;
+    max-height: 100%;
+    width: auto; }
+  .logo:active {
+    fill: #8330c6; }
+  .logo:focus, .logo:hover {
+    fill: #3a30f8; }
+    .logo:focus .logo__img, .logo:hover .logo__img {
+      transform: rotate(360deg) scale(1.1);
+      transition: transform 0.8s; }
+  .logo__img {
+    margin-right: 2.4%; }
+  .logo__text {
+    height: 72.5%; }
+  @media screen and (max-width: 700px) {
+    .logo {
+      height: 30px; } }
 
 .intro {
   width: 100%;
@@ -908,6 +970,14 @@ input[type="radio"].visually-hidden {
       background-color: transparent;
       box-shadow: 0 0 0 1px #3a30f8;
       transform: scale(1.625); }
+
+@media screen and (max-width: 1350px) {
+  .side-nav {
+    right: 1vw; } }
+
+@media screen and (max-width: 700px) {
+  .side-nav {
+    display: none; } }
 
 .page-footer {
   background: #292929;
