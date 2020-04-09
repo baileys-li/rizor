@@ -34,4 +34,4 @@ mixin createPreview(fileName, alt)
               img/preview/${fileName}.webp 1x`)
       img(src=`img/preview/${fileName}.png`,
           srcset=`img/preview/${fileName}@3.png 3x, img/preview/${fileName}@2.png 2x`,
-          alt= alt, width="325", height="167")._image
+          alt= alt, width="325", height="167").preview__image

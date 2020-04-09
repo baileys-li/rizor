@@ -9,12 +9,13 @@
     scroll-snap-type: x mandatory
     scrollbar-color: transparent transparent
     scrollbar-width: none
+    scroll-behavior: smooth
     @include reset-list
     &::-webkit-scrollbar
       width: 0
     &::-webkit-scrollbar-track
       background: transparent
-    :-webkit-scrollbar-thumb
+    &:-webkit-scrollbar-thumb
       background: transparent
       border: none
 
@@ -23,5 +24,3 @@
   flex: 1 0 100%
   margin-right: 200px
   scroll-snap-align: start
-  &:last-child
-    margin-right: 0
