@@ -5,9 +5,13 @@ const header = document.querySelector(".page-header"),
   mainNavList = header.querySelector(".main-nav__list"),
   mainNavLinks = mainNavList.querySelectorAll(".main-nav__link");
 
+const sideNav = document.querySelector(".side-nav"),
+  sideNavLinks = sideNav.querySelectorAll(".side-nav__link");
+
 showHideOnScroll(header);
 changeElementNotOnTop(header, "shrink");
 activeNavLinkOnScroll(mainNavLinks, "current");
+activeNavLinkOnScroll(sideNavLinks, "current");
 
 setupHamburgerMenu(toggle, mainNavList);
 
