@@ -1,20 +1,22 @@
 .product-info
   &--design
     flex: 0 0 300px
-    margin-right: $container-padding * 2 // 30px
+    margin-right: $container-padding * 2    // 30px
   &--color
     position: relative
     top: 265px
-    flex-direction: column
+
     display: flex
     flex-basis: 370px
-    max-width: 370px
+    flex-direction: column
     align-items: flex-end
+    max-width: 370px
 
   &__title
     margin: 0 0 14px
-    font-family: $headline-fonts
+
     font-size: 40px
+    font-family: $headline-fonts
     letter-spacing: 3.2px
   &__subtitle
     margin: 0 0 21px
@@ -22,13 +24,15 @@
       padding: 0 2px
 
   &__list
-    list-style: none
     padding-left: 42px
-    &--mods
+
+    list-style: none
+    &--modes
       padding-left: 46px
 
   &__spec
     position: relative
+
     margin: 0 0 21px
     &::before
       content: ""
@@ -41,7 +45,7 @@
 
       background-color: $primary-foreground
 
-    &--mods::before
+    &--modes::before
       top: 11px
       left: -41px
 
@@ -50,13 +54,16 @@
     height: 315px
 
   &__table
+    width: 80%
     margin-top: 67px
-    width: 79%
+    margin-left: -5px
 
   &__background
+    position: absolute
+    bottom: 0
+    z-index: -1
+
     width: 73%
     height: 315px
+
     background: url(../img/pattern.png)
-    bottom: 0
-    position: absolute
-    z-index: -1
