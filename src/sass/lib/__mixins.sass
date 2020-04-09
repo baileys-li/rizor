@@ -27,3 +27,9 @@
 @mixin rect($width, $height: $width)
   width: $width
   height: $height
+
+@mixin rotate-text
+  text-orientation: mixed
+  writing-mode: vertical-rl
+
+  transform: rotate(180deg)
