@@ -551,11 +551,11 @@ input[type="radio"].visually-hidden {
     .intro__scroll-down:focus {
       outline: none; }
   .intro__decorative {
-    top: -40px;
-    left: -157%;
+    top: -6%;
+    left: -158%;
     z-index: -1;
     width: 900px;
-    height: 889px; }
+    height: 121%; }
   .intro__pointer {
     right: 57px;
     top: -31px; }
@@ -591,11 +591,31 @@ input[type="radio"].visually-hidden {
   .features__pointer {
     left: -54px;
     top: 29px; }
+  .features__decorative {
+    line-height: 0.985;
+    color: #f8f8f8;
+    font-size: 173px;
+    text-align: right;
+    top: -0.5%;
+    right: -14%;
+    letter-spacing: 10px;
+    -webkit-text-orientation: mixed;
+    text-orientation: mixed;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg); }
+    .features__decorative .product__ver {
+      letter-spacing: -.25em;
+      -webkit-margin-end: 34px;
+      margin-inline-end: 50px; }
 
 .specs {
   margin-top: 174px;
   padding: 64px 0;
   overflow: hidden; }
+  .specs__wrapper {
+    position: relative; }
   .specs__media {
     flex: 1 0 auto;
     order: 1;
@@ -611,6 +631,12 @@ input[type="radio"].visually-hidden {
   .specs__pointer {
     top: 31px;
     right: 45px; }
+  .specs__decorative {
+    top: -11%;
+    left: -60.5%;
+    z-index: -1;
+    width: 900px;
+    height: 123%; }
 
 .for-whom {
   min-height: 790px;
@@ -621,23 +647,26 @@ input[type="radio"].visually-hidden {
     min-height: 790px;
     color: #ffffff;
     background-color: #3a30f8; }
+  .for-whom__content {
+    position: relative; }
   .for-whom__media {
-    order: 2;
+    position: relative;
+    top: -60px;
     display: block;
-    background: linear-gradient(to top, #3a30f8, #8330c6);
     flex: 1 0 auto;
+    order: 2;
     width: 63.4vw;
     height: 750px;
-    position: relative;
-    top: -60px; }
+    background: linear-gradient(to top, #3a30f8, #8330c6); }
   .for-whom__image {
-    height: 100%;
     width: 100%;
+    height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: left bottom;
     object-position: left bottom; }
   .for-whom__text {
+    position: relative;
     flex: 0 0 31.6%;
     padding-top: 52px;
     padding-right: 20px; }
@@ -645,6 +674,12 @@ input[type="radio"].visually-hidden {
     margin: 50px 0 21px; }
   .for-whom__button {
     margin-top: 74px; }
+  .for-whom__decorative {
+    top: 0;
+    left: -59.5%;
+    width: 900px;
+    height: 115%;
+    fill: rgba(255, 255, 255, 0.03); }
 
 .product-info--design {
   flex: 0 0 300px;

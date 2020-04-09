@@ -6,25 +6,34 @@
   &__wrapper
     width: 100%
     min-height: 790px
+
     @include accent-colors--invert
 
+  &__content
+    position: relative
+
   &__media
-    order: 2
-    display: block
-    background: $gradient-accent
-    flex: 1 0 auto
-    width: 63.4vw
-    height: 750px
     position: relative
     top: -60px
 
+    display: block
+    flex: 1 0 auto
+    order: 2
+    width: 63.4vw
+    height: 750px
+
+    background: $gradient-accent
+
   &__image
-    height: 100%
     width: 100%
+    height: 100%
+
     object-fit: cover
     object-position: left bottom
 
   &__text
+    position: relative
+
     flex: 0 0 31.6%
     padding-top: 52px
     padding-right: 20px
@@ -34,3 +43,12 @@
 
   &__button
     margin-top: 74px
+
+  &__decorative
+    top: 0
+    left: -59.5%
+
+    width: 900px
+    height: 115%
+
+    fill: rgba(255, 255, 255, 0.03)
