@@ -405,6 +405,10 @@ input[type="radio"].visually-hidden {
   line-height: 4;
   letter-spacing: 0.08em;
   text-transform: uppercase; }
+  @media screen and (max-width: 700px) {
+    .section-name {
+      font-size: 1.05em;
+      line-height: 1.6; } }
 
 .strong {
   font-weight: bold; }
@@ -658,24 +662,24 @@ input[type="radio"].visually-hidden {
   .intro__pointer {
     display: none; }
   .intro__decorative {
-    height: 100%;
-    left: -40%;
+    height: 80%;
+    left: -85%;
     top: 0%; } }
 
 .features {
   width: 100%;
-  overflow: hidden;
-  padding-top: 107px; }
+  padding-top: 107px;
+  overflow-x: hidden; }
   .features__wrapper {
+    position: relative;
     justify-content: flex-end;
-    min-height: 750px;
-    position: relative; }
+    min-height: 750px; }
   .features__media {
-    height: 750px;
     flex: 1 0 auto;
-    width: 39vw; }
+    width: 39vw;
+    height: 750px; }
   .features__text {
-    flex: 0 0 799px;
+    flex: 0 0 68.35%;
     padding: 50px 0 252px;
     padding-left: 100px; }
   .features__specs {
@@ -684,12 +688,33 @@ input[type="radio"].visually-hidden {
     margin: 0;
     padding: 0;
     list-style: none; }
+    @media screen and (max-width: 700px) {
+      .features__specs {
+        flex-direction: column; } }
+  .features__specs-item--design {
+    flex: 0 0 300px;
+    margin-right: 30px; }
+    @media screen and (max-width: 1100px) {
+      .features__specs-item--design {
+        margin-right: 0; } }
+  .features__specs-item--color {
+    margin-top: 265px;
+    flex: 0 0 370px; }
+    @media screen and (max-width: 700px) {
+      .features__specs-item--color {
+        margin-top: 32px; } }
+  @media screen and (max-width: 1100px) {
+    .features__specs-item {
+      flex: 0 1 48%; } }
+  @media screen and (max-width: 700px) {
+    .features__specs-item {
+      flex-basis: auto; } }
   .features__headline {
-    color: #3a30f8;
-    margin-bottom: 41px; }
+    margin-bottom: 41px;
+    color: #3a30f8; }
   .features__pointer {
-    left: -54px;
-    top: 29px; }
+    top: 29px;
+    left: -54px; }
   .features__decorative {
     top: -11.5%;
     right: -16.7%;
@@ -706,9 +731,27 @@ input[type="radio"].visually-hidden {
     writing-mode: vertical-rl;
     transform: rotate(180deg); }
     .features__decorative .product__ver {
-      letter-spacing: -.25em;
+      letter-spacing: -0.25em;
       -webkit-margin-end: 34px;
       margin-inline-end: 50px; }
+  @media screen and (max-width: 1100px) {
+    .features__wrapper {
+      flex-direction: column;
+      min-height: auto; }
+    .features__media {
+      left: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      max-height: 400px;
+      right: 50%;
+      width: 100vw; }
+    .features__text {
+      padding: 0px 30px;
+      flex-grow: 1;
+      z-index: 2;
+      background-color: white; }
+    .features__features__specs li {
+      width: 50%; } }
 
 .specs {
   margin-top: 174px;
@@ -781,18 +824,11 @@ input[type="radio"].visually-hidden {
     height: 115%;
     fill: rgba(255, 255, 255, 0.03); }
 
-.product-info--design {
-  flex: 0 0 300px;
-  margin-right: 30px; }
-
 .product-info--color {
   position: relative;
-  top: 265px;
   display: flex;
-  flex-basis: 370px;
   flex-direction: column;
-  align-items: flex-end;
-  max-width: 370px; }
+  align-items: flex-end; }
 
 .product-info__title {
   margin: 0 0 14px;
@@ -828,7 +864,7 @@ input[type="radio"].visually-hidden {
 
 .product-info__previews {
   width: 100%;
-  height: 315px; }
+  height: 300px; }
 
 .product-info__table {
   width: 80%;
@@ -840,11 +876,11 @@ input[type="radio"].visually-hidden {
   bottom: 0;
   z-index: -1;
   width: 73%;
-  height: 315px;
+  height: 300px;
   background: url(../img/pattern.png); }
 
 .color-choose {
-  width: 270px; }
+  width: 72.97%; }
   .color-choose__list {
     display: flex;
     justify-content: space-around;
@@ -870,7 +906,7 @@ input[type="radio"].visually-hidden {
   height: 100%; }
   .preview__image {
     position: relative;
-    top: 7px;
+    top: 16px;
     width: 327px;
     height: 182px; }
 
@@ -899,7 +935,6 @@ input[type="radio"].visually-hidden {
 .slide {
   height: 100%;
   flex: 1 0 100%;
-  margin-right: 200px;
   scroll-snap-align: start; }
 
 .table__head {
@@ -985,7 +1020,8 @@ input[type="radio"].visually-hidden {
       display: flex;
       min-height: 500px; }
       .video__link {
-        display: flex; }
+        display: flex;
+        width: 100%; }
       .video__preview {
         height: auto;
         z-index: 0; } }
