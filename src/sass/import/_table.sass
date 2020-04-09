@@ -11,14 +11,16 @@
     padding-left: 9px
 
   &__value
-    font-size: 60px
+    font-size: 3.33em // ≈60px
     letter-spacing: -4.2px
     line-height: 1.2
     color: $primary-accent
     font-family: $headline-fonts
+    @media screen and (max-width: 500px)
+      font-size: 30px
 
   &__units
-    font-size: 24px
+    font-size: 0.4em
     letter-spacing: -1.68px
     font-style: normal
     margin-left: 8px

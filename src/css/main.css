@@ -759,21 +759,49 @@ input[type="radio"].visually-hidden {
   overflow: hidden; }
   .specs__wrapper {
     position: relative; }
+    @media screen and (max-width: 1100px) {
+      .specs__wrapper {
+        flex-direction: column; } }
   .specs__media {
     flex: 1 0 auto;
     order: 1;
     width: 57vw;
     height: 750px; }
+    @media screen and (max-width: 1100px) {
+      .specs__media {
+        height: auto;
+        width: 88vw;
+        right: 15px; } }
   .specs__text {
     flex: 0 0 475px;
     max-width: 475px;
     padding-top: 73px; }
+    @media screen and (max-width: 1100px) {
+      .specs__text {
+        max-width: none;
+        padding-top: 0;
+        padding-left: 100px; } }
+    @media screen and (max-width: 700px) {
+      .specs__text {
+        padding-left: 0; } }
   .specs__play {
     bottom: 80px;
     left: -61px; }
+    @media screen and (max-width: 1100px) {
+      .specs__play {
+        top: 70px;
+        right: 0;
+        bottom: auto;
+        left: auto; } }
+    @media screen and (max-width: 700px) {
+      .specs__play {
+        right: -30px; } }
   .specs__pointer {
     top: 31px;
     right: 45px; }
+    @media screen and (max-width: 700px) {
+      .specs__pointer {
+        display: none; } }
   .specs__decorative {
     top: -11%;
     left: -60.5%;
@@ -844,9 +872,12 @@ input[type="radio"].visually-hidden {
 
 .product-info__title {
   margin: 0 0 14px;
-  font-size: 40px;
+  font-size: 2.22em;
   font-family: "Rubik Mono One", "Arial Black", sans-serif;
   letter-spacing: 3.2px; }
+  @media screen and (max-width: 700px) {
+    .product-info__title {
+      font-size: 1.5em; } }
 
 .product-info__subtitle {
   margin: 0 0 21px; }
@@ -960,14 +991,17 @@ input[type="radio"].visually-hidden {
   padding-left: 9px; }
 
 .table__value {
-  font-size: 60px;
+  font-size: 3.33em;
   letter-spacing: -4.2px;
   line-height: 1.2;
   color: #3a30f8;
   font-family: "Rubik Mono One", "Arial Black", sans-serif; }
+  @media screen and (max-width: 500px) {
+    .table__value {
+      font-size: 30px; } }
 
 .table__units {
-  font-size: 24px;
+  font-size: 0.4em;
   letter-spacing: -1.68px;
   font-style: normal;
   margin-left: 8px; }
