@@ -3,16 +3,16 @@ mixin createVideo(sectionName, prevPic = sectionName, isSimpleButton = false, al
     a(href="https://youtu.be/"+id)._link
       img(src=`img/${prevPic}.jpg`, alt= alt, class= sectionName + "__preview", height="200")._preview
 
-      if isSimpleButton
-        button._play.-simple
-          span.visually-hidden!= `Смотреть видео`
-          svg(role="img", focusable="false", width="40", height="44")._play-icon.-simple
-            use(xlink:href="#icon-play")
-      else
-        button(class= sectionName + "__play")._play
-          span._play-text!= `Смотреть <br> видео`
-          svg(role="img", focusable="false", width="66", height="72")._play-icon
-            use(xlink:href="#icon-play")
+    if isSimpleButton
+      button._play.-simple
+        span.visually-hidden!= `Смотреть видео`
+        svg(role="img", focusable="false", width="40", height="44")._play-icon.-simple
+          use(xlink:href="#icon-play")
+    else
+      button(class= sectionName + "__play")._play
+        span._play-text!= `Смотреть <br> видео`
+        svg(role="img", focusable="false", width="66", height="72")._play-icon
+          use(xlink:href="#icon-play")
 
 
 mixin drawPointer(width, height, sectionName, lineCoords, circleX, circleY)
