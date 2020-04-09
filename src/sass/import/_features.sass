@@ -1,12 +1,12 @@
 .features
   width: 100%
-  position: relative
   overflow: hidden
   padding-top: 107px
 
   &__wrapper
     justify-content: flex-end
     min-height: 750px
+    position: relative
   &__media
     height: 750px
     flex: 1 0 auto
@@ -30,14 +30,15 @@
     top: 29px
 
   &__decorative
-    line-height: 0.985
-    color: $secondary-light
+    top: -11.5%
+    right: -16.7%
+
+    margin: 0
+
     font-size: 173px
+    line-height: 0.985
     text-align: right
-
-    top: -0.5%
-    right: -14%
-
+    color: $secondary-light
     letter-spacing: 10px
 
     @include rotate-text

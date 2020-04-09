@@ -1,13 +1,14 @@
 sections.features#features
   figure._wrapper.container
+    p._decorative.decorative.headline
+        span.product__ver= product.ver
+        <br>
+        | #{product.company}
 
     +createVideo("features", "photo2", isSimpleButton=true)
 
     figcaption._text
-      p._decorative.decorative.headline
-        span.product__ver= product.ver
-        <br>
-        | #{product.company}
+
       h2._headline.section-name Преимущества
 
       ul._specs
