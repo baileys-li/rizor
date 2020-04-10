@@ -694,7 +694,7 @@ input[type="radio"].visually-hidden {
     top: -31px; }
   .intro__play {
     top: 10%;
-    left: -8.5%; }
+    left: -6.5%; }
 
 @media screen and (max-width: 1100px) {
   .intro {
@@ -1058,9 +1058,7 @@ input[type="radio"].visually-hidden {
   height: 100%; }
   .preview__image {
     position: relative;
-    top: 16px;
-    width: 88.37%;
-    height: auto; }
+    top: 16px; }
 
 .slider__list {
   display: flex;

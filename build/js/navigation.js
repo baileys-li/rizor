@@ -88,7 +88,7 @@ function changeElementNotOnTop(element, classMod = "mod") {
 
   window.addEventListener("scroll", () => {
     let currentScrollPos = window.pageYOffset;
-    if (currentScrollPos > elementHeight - EXTRA_HEIGHT) {
+    if (currentScrollPos > elementHeight - SHIFT) {
       element.classList.add(newClass);
     } else {
       element.classList.remove(newClass);
