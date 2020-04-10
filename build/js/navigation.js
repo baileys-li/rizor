@@ -26,11 +26,13 @@ toggle.onclick = () => {
   toggle.blur();
 };
 
-mainNavLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    mobileSwitchState();
+if (document.body.clientWidth <= 700) {
+  mainNavLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileSwitchState();
+    });
   });
-});
+}
 
 function mobileSwitchState() {
   toggle.classList.toggle(toggleOpenClass);
