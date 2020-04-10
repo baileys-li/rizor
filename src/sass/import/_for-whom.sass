@@ -6,11 +6,16 @@
   &__wrapper
     width: 100%
     min-height: 790px
+    @media screen and (max-width: 1200px)
+      min-height: none
+      display: flex
 
     @include accent-colors--invert
 
   &__content
     position: relative
+    @media screen and (max-width: 1000px)
+      flex-direction: column
 
   &__media
     position: relative
@@ -24,6 +29,17 @@
 
     background: $gradient-accent
     overflow: hidden
+    @media screen and (max-width: 1200px)
+      width: 67.5vw
+      height: auto
+    @media screen and (max-width: 1000px)
+      left: 50%
+      margin-left: -50vw
+      margin-right: -50vw
+      max-width: 100vw
+      right: 50%
+      width: 100vw
+      top: 0
 
   &__media-decorative
     font-size: 10.31rem
@@ -35,7 +51,11 @@
     text-align: right
     & .product__ver
       letter-spacing: -0.25em
-      margin-right: 64px
+      margin-right: 0.345em
+    @media screen and (max-width: 1000px)
+      font-size: 10vmax
+      bottom: -2vmax
+      left: 0
 
   &__image
     width: 100%
@@ -50,6 +70,12 @@
     flex: 0 0 31.6%
     padding-top: 52px
     padding-right: 20px
+    @media screen and (max-width: 1000px)
+      padding: 20px 0 70px
+      flex: 1 0 auto
+
+      // padding: 20px 30px
+      // background-color: $primary-accent
 
   &__message
     margin: 50px 0 21px
