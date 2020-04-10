@@ -64,9 +64,19 @@ input[type="radio"].visually-hidden
   border-radius: 3em
   box-shadow: 0 5px 5px 0 rgba(0, 0, 1, 0.2)
 
+  position: relative
+
   @include accent-colors--invert
   &--invert
     @include accent-colors
+  &:focus
+    @include focus-reset
+  &:hover, &:focus
+    transform: scale(1.1)
+    box-shadow: 0 2px 2px 0 rgba(0,0,1,.2)
+
+  &:active
+    box-shadow: inset 0px 2px 1px 1px rgba(0,0,1,.2)
 
 .headline
   font-size: 4.44em // 80px
