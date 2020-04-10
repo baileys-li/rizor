@@ -1,5 +1,19 @@
-@keyframes slideFromLeft
+@keyframes showMobileNav
   0%
-    left: - $mobile-nav-width
+    width: 0%
+    font-size: 0
+    padding: 0
+  60%
+    padding: 10vh 0
+    font-size: 1.2em
+
+  100%
+    width: $mobile-nav-width
+    padding: 10vh 0
+    font-size: 1.2em
+
+@keyframes shift
   0%
     left: 0
+  100%
+    left: $mobile-nav-width

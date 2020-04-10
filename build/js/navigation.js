@@ -5,7 +5,8 @@ const header = document.querySelector(".page-header"),
   mainNavList = header.querySelector(".main-nav__list"),
   mainNavLinks = mainNavList.querySelectorAll(".main-nav__link");
 
-const pageMain = document.querySelector(".page-main");
+const pageMain = document.querySelector(".page-main"),
+  pageFooter = document.querySelector(".page-footer");
 
 const sideNav = document.querySelector(".side-nav"),
   sideNavLinks = sideNav.querySelectorAll(".side-nav__link");
@@ -15,29 +16,28 @@ changeElementNotOnTop(header, "shrink");
 activeNavLinkOnScroll(mainNavLinks, "current");
 activeNavLinkOnScroll(sideNavLinks, "current");
 
-setupHamburgerMenu(toggle, mainNavList, pageMain, header);
+const toggleOpenClass = createModifiedClass(toggle, "open"),
+  navOpenClass = createModifiedClass(mainNavList, "show"),
+  headOpenClass = createModifiedClass(header, "shifted"),
+  mainOpenClass = createModifiedClass(pageMain, "shifted");
 
-function setupHamburgerMenu(
-  toggle,
-  nav,
-  main,
-  head,
-  modForToggle = "open",
-  modForNav = "show",
-  modForHead = "shifted",
-  modForMain = modForHead
-) {
-  const toggleOpenClass = createModifiedClass(toggle, modForToggle),
-    navOpenClass = createModifiedClass(nav, modForNav),
-    headOpenClass = createModifiedClass(head, modForHead),
-    mainOpenClass = createModifiedClass(main, modForMain);
+toggle.onclick = () => {
+  mobileSwitchState();
+  toggle.blur();
+};
 
-  toggle.onclick = () => {
-    toggle.classList.toggle(toggleOpenClass);
-    nav.classList.toggle(navOpenClass);
-    head.classList.toggle(headOpenClass);
-    main.classList.toggle(mainOpenClass);
-  };
+mainNavLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileSwitchState();
+  });
+});
+
+function mobileSwitchState() {
+  toggle.classList.toggle(toggleOpenClass);
+  mainNavList.classList.toggle(navOpenClass);
+  header.classList.toggle("shifted");
+  pageMain.classList.toggle("shifted");
+  pageFooter.classList.toggle("shifted");
 }
 
 function activeNavLinkOnScroll(links, classMod = "mod") {
