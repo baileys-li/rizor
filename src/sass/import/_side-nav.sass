@@ -35,6 +35,12 @@
     border-radius: 50%
 
     @include rect(8px)
+    &:focus
+      @include focus-reset
+    &:focus,
+    &:hover
+      box-shadow: 0 0 0 1px $primary-foreground
+
     &--current
       background-color: transparent
       box-shadow: 0 0 0 1px $primary-accent  // box shadow because border will be cliped

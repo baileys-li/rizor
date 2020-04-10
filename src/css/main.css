@@ -1221,6 +1221,10 @@ input[type="radio"].visually-hidden {
     border-radius: 50%;
     width: 8px;
     height: 8px; }
+    .side-nav__link:focus:focus {
+      outline: none; }
+    .side-nav__link:focus, .side-nav__link:hover {
+      box-shadow: 0 0 0 1px #000000; }
     .side-nav__link--current {
       background-color: transparent;
       box-shadow: 0 0 0 1px #3a30f8;
