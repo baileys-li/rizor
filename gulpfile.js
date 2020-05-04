@@ -1,13 +1,10 @@
 "use strict";
 
 const gulp = require("gulp"),
-  log = require("fancy-log"),
   sass = require("gulp-sass"),
   cleanCSS = require("gulp-clean-css"),
   autoprefixer = require("gulp-autoprefixer"),
-  pug = require("gulp-pug"),
-  pugbem = require("gulp-pugbem"),
-  imagemin = require("gulp-imagemin"),
+  nunjucks = require("gulp-nunjucks"),
   browserSync = require("browser-sync").create(),
   reload = browserSync.reload;
 
@@ -17,8 +14,8 @@ const srcBase = "./src/",
   destBase = "./build/";
 const paths = {
   pages: {
-    src: srcBase + "pages/*.pug",
-    all: srcBase + "pages/**/*.pug",
+    src: srcBase + "pages/*.html",
+    all: srcBase + "pages/**/*", //.{nunjucks, nunjs, nj, njk, html, htm, template, tmpl, tpl}",
     dest: destBase,
   },
 
@@ -38,16 +35,11 @@ const paths = {
   },
 };
 
-// * Pug Compiler
-gulp.task("pug", () =>
+// * Nunjucks Compiler
+gulp.task("njk", () =>
   gulp
     .src(paths.pages.src)
-    .pipe(
-      pug({
-        pretty: true,
-        plugins: [pugbem],
-      })
-    )
+    .pipe(nunjucks.compile())
     .pipe(gulp.dest(paths.pages.dest))
 );
 
@@ -78,28 +70,10 @@ gulp.task("css", () =>
     .pipe(gulp.dest(paths.css.dest))
 );
 
-gulp.task("images", () =>
-  gulp
-    .src(paths.images.src)
-    .pipe(
-      imagemin([
-        imagemin.optipng({
-          optimizationLevel: 3,
-        }),
-        imagemin.mozjpeg({
-          progressive: true,
-          quality: 75,
-        }),
-        imagemin.svgo(),
-      ])
-    )
-    .pipe(gulp.dest(paths.images.dest))
-);
-
 // * Watchers, Browser Sync
 
 gulp.task("watch", () => {
-  gulp.watch(paths.pages.all, gulp.series("pug"));
+  gulp.watch(paths.pages.all, gulp.series("njk"));
   gulp.watch(paths.sass.src, gulp.series("sass", "css"));
   gulp.watch(destBase + "*.html").on("change", reload);
   gulp.watch(destBase + "js/**/*.js").on("change", reload);
@@ -115,5 +89,5 @@ gulp.task("serve", () =>
 
 gulp.task(
   "default",
-  gulp.series(gulp.parallel("pug", "sass"), gulp.parallel("watch", "serve"))
+  gulp.series(gulp.parallel("njk", "sass"), gulp.parallel("watch", "serve"))
 );

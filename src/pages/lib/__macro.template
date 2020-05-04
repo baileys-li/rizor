@@ -1,0 +1,56 @@
+{% macro createVideo(sectionName, previewPicName = sectionName, isSimpleButton = false, alt= "Представляем " + title, id="678suPK9iIc") %}
+<div class="video {{sectionName}}__media" data-id="{{id}}">
+  <a class="video__link" href="https://youtu.be/" + {{id}}>
+    <img src="img/{{previewPicName}}.jpg" alt="{{alt}}" class="video__preview {{sectionName}}__preview" height="200">
+  </a>
+  {% if isSimpleButton %}
+  <button class="video__play video__play--simple">
+    <span class="visually-hidden">Смотреть видео</span>
+    <svg class="video__play-icon" role="img" focusable="false" width="66" height="72">
+      <use xlink:href="#icon-play"></use>
+    </svg>
+  </button>
+  {% else %}
+  <button class="{{sectionName}}__play video__play">
+    <span class="video__play-text">Смотреть <br> видео</span>
+    <svg class="video__play-icon" role="img" focusable="false" width="66" height="72">
+      <use xlink:href="#icon-play"></use>
+    </svg>
+  </button>
+  {% endif %}
+</div>
+{% endmacro %}
+
+
+{% macro drawPointer(width, height, sectionName, lineCoords, circleX, circleY) %}
+
+<svg class="{{sectionName}}__pointer pointer" width="{{width}}" height="{{height}}" role="img" focusable="false"
+  fill="none">
+  <polyline class="pointer__line" points="{{lineCoords}}" stroke-width="1"></polyline>
+  <circle class="pointer__point" cx="{{circleX}}" cy="{{circleY}}" r="1.5"></circle>
+</svg>
+{% endmacro %}
+
+{% macro createColor(id, text, color, isChecked = "") %}
+<li class="color">
+  <input class="color__val visually-hidden slider__toggle" id="color--{{id}}" type="radio" name="color" value="lime"
+    {{isChecked}} />
+  <label class="color__label color__label--{{id}} pointer-anchor" for="color--{{id}}"> {{text}}
+    <svg class="color__icon" fill="{{color}}" width="22" height="22">
+      <circle cx="11" cy="11" r="10"></circle>
+    </svg>
+    {{ drawPointer("5", "48", "color", "3,1 3,46", "3", "46") }}
+  </label>
+</li>
+
+{% endmacro %}
+
+{% macro createPreview(fileName, alt) %}
+<li class="slide preview">
+  <picture>
+    <source type="image/webp" srcset="img/preview/{{fileName}}@3.webp 3x, img/preview/{{fileName}}@2.webp 2x,
+              img/preview/{{fileName}}.webp 1x" /><img class="preview__image" src="img/preview/{{fileName}}.png"
+      srcset="img/preview/{{fileName}}@3.png 3x, img/preview/{{fileName}}@2.png 2x" alt={{alt}} width="325" height="167" />
+  </picture>
+</li>
+{% endmacro %}

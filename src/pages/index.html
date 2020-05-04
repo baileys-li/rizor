@@ -1,0 +1,15 @@
+{% set companyName = 'Rizor' %}
+{% set product = {company: companyName, line: "Hovertrax", ver: "4.0"} %}
+
+{% set title = product.company + " " + product.line + " " + product.ver %}
+{% set navItems = {"#features": "Преимущества", "#specs": "Характеристики", "#for-whom": "Для кого"} %}
+
+{% extends "layout/__base.template" %}
+
+
+{% block content %}
+  {% include "include/intro.njk" %}
+  {% include "include/features.njk" %}
+  {% include "include/specs.njk" %}
+  {% include "include/for-whom.njk" %}
+{% endblock %}

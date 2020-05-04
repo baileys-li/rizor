@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Rizor Hovertrax 4.0</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&amp;family=Rubik+Mono+One&amp;display=swap" rel="stylesheet"/>
-    <link href="css/main.css" rel="stylesheet"/>
-    <meta name="theme-color" content="#3a30f8"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png"/>
-    <link rel="manifest" href="img/favicons/site.webmanifest"/>
-    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#000000"/>
-    <meta name="apple-mobile-web-app-title" content="Rizor"/>
-    <meta name="application-name" content="Rizor"/>
-    <meta name="msapplication-TileColor" content="#ffffff"/>
-    <meta name="theme-color" content="#ffffff"/>
-  </head>
-  <body><svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rizor Hovertrax 4.0</title>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Rubik+Mono+One&display=swap">
+
+  <link href="css/main.css" rel="stylesheet" />
+  <meta name="theme-color" content="#3a30f8" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="img/favicons/site.webmanifest" />
+  <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#000000" />
+  <meta name="apple-mobile-web-app-title" content="Rizor" />
+  <meta name="application-name" content="Rizor" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="theme-color" content="#ffffff" />
+</head>
+
+<body>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
   <defs>
 
     <symbol id="logo__gear" viewBox="0 0 41 41">
@@ -45,8 +52,9 @@
   </defs>
 </svg>
 
-    <header class="page-header">
-      <nav class="main-nav container"><a class="logo main-nav__logo" href="#intro">Логотип Rizor, наверх
+  <header class="page-header">
+      <nav class="main-nav container">
+      <a class="logo main-nav__logo" href="#intro">Логотип Rizor, наверх
           <!-- 2 separate svg for easy animation-->
           <svg class="logo__img" role="img" focusable="false" width="40" height="40">
             <use xlink:href="#logo__gear"></use>
@@ -62,250 +70,389 @@
           </svg>
         </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a class="main-nav__link" href="#features">Преимущества</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="#specs">Характеристики</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="#for-whom">Для кого</a></li>
+
+          
+            <li class="main-nav__item"><a class="main-nav__link" href=#features>Преимущества</a></li>
+
+          
+            <li class="main-nav__item"><a class="main-nav__link" href=#specs>Характеристики</a></li>
+
+          
+            <li class="main-nav__item"><a class="main-nav__link" href=#for-whom>Для кого</a></li>
+
+          
         </ul>
       </nav>
     </header>
-    <main class="page-main">
-      <section class="intro" id="intro">
-        <figure class="intro__wrapper container">
-          <svg class="intro__decorative decorative" role="img" focusable="false" width="0" height="0">
-            <use xlink:href="#logo__gear"></use>
-          </svg>
-                <div class="video intro__media" data-id="678suPK9iIc"><a class="video__link" href="https://youtu.be/678suPK9iIc"><img class="intro__preview video__preview" src="img/photo1.jpg" alt="Представляем Rizor Hovertrax 4.0" height="200"/></a>
-                  <button class="intro__play video__play"><span class="video__play-text">Смотреть <br> видео</span>
-                    <svg class="video__play-icon" role="img" focusable="false" width="66" height="72">
-                      <use xlink:href="#icon-play"></use>
-                    </svg>
-                  </button>
-                </div>
-          <figcaption class="intro__text">
-            <h1 class="intro__title pointer-anchor headline">Rizor<br>
-                    <svg class="intro__pointer pointer" width="20" height="72" role="img" focusable="false" fill="none">
-                      <polyline class="pointer__line" points="0,71 17,71 17,3" stroke-width="1"></polyline>
-                      <circle class="pointer__point" cx="17" cy="3" r="1.5"></circle>
-                    </svg>Hovertrax<br><b class="product__ver">4.0</b>
-            </h1>
-            <p class="intro__subtitle subheadline">Маневренность, легкость, экологичность</p><a class="intro__scroll-down" href="#features">Листать вниз
-              <svg class="intro__scroll-down-arrow" role="img" focusable="false" width="12" height="96">
-                <use xlink:href="#icon-down"></use>
-              </svg></a>
-          </figcaption>
-        </figure>
-      </section>
-      <section class="features" id="features">
-        <figure class="features__wrapper container">
-          <p class="features__decorative decorative headline"><span class="product__ver">4.0</span><br>Rizor</p>
-                <div class="video features__media" data-id="678suPK9iIc"><a class="video__link" href="https://youtu.be/678suPK9iIc"><img class="features__preview video__preview" src="img/photo2.jpg" alt="Представляем Rizor Hovertrax 4.0" height="200"/></a>
-                  <button class="video__play video__play--simple"><span class="visually-hidden">Смотреть видео</span>
-                    <svg class="video__play-icon video__play-icon--simple" role="img" focusable="false" width="40" height="44">
-                      <use xlink:href="#icon-play"></use>
-                    </svg>
-                  </button>
-                </div>
-          <figcaption class="features__text">
-            <h2 class="features__headline section-name">Преимущества</h2>
-            <ul class="features__specs">
-              <li class="features__specs-item features__specs-item--design">
-                <article class="product-info product-info--design">
-                  <h3 class="product-info__title">Дизайн</h3>
-                  <p class="product-info__subtitle">Внешний вид скутера дышит идеями футуризма:</p>
-                  <ul class="product-info__list">
-                    <li class="product-info__spec">плавные линии</li>
-                    <li class="product-info__spec">подсветка светодиодными индикаторами</li>
-                    <li class="product-info__spec">рельефные бамперы, оснащенные защитными панелями</li>
-                  </ul>
-                </article>
-              </li>
-              <li class="features__specs-item features__specs-item--color">
-                <article class="product-info product-info--color slider">
-                  <form class="color-choose">
-                    <h3 class="product-info__title pointer-anchor">Цвет
-                            <svg class="features__pointer pointer" width="18" height="290" role="img" focusable="false" fill="none">
-                              <polyline class="pointer__line" points="18,1 2,1 2,288" stroke-width="1"></polyline>
-                              <circle class="pointer__point" cx="2" cy="288" r="1.5"></circle>
-                            </svg>
-                    </h3>
-                    <p class="product-info__subtitle">Модель представлена сразу <br> в нескольких цветах.</p>
-                    <ul class="color-choose__list slider__toggles">
-                            <li class="color">
-                              <input class="color__val visually-hidden slider__toggle" id="color--lime" type="radio" name="color" value="lime" checked="checked"/>
-                              <label class="color__label color__label--lime pointer-anchor" for="color--lime">лаймовый
-                                <svg class="color__icon" fill="#e2e837" width="22" height="22">
-                                  <circle cx="11" cy="11" r="10"></circle>
-                                </svg>
-                                      <svg class="color__pointer pointer" width="5" height="48" role="img" focusable="false" fill="none">
-                                        <polyline class="pointer__line" points="3,1 3,46" stroke-width="1"></polyline>
-                                        <circle class="pointer__point" cx="3" cy="46" r="1.5"></circle>
-                                      </svg>
-                              </label>
-                            </li>
-                            <li class="color">
-                              <input class="color__val visually-hidden slider__toggle" id="color--cyan" type="radio" name="color" value="cyan"/>
-                              <label class="color__label color__label--lime pointer-anchor" for="color--cyan">циановый
-                                <svg class="color__icon" fill="#00b6f1" width="22" height="22">
-                                  <circle cx="11" cy="11" r="10"></circle>
-                                </svg>
-                                      <svg class="color__pointer pointer" width="5" height="48" role="img" focusable="false" fill="none">
-                                        <polyline class="pointer__line" points="3,1 3,46" stroke-width="1"></polyline>
-                                        <circle class="pointer__point" cx="3" cy="46" r="1.5"></circle>
-                                      </svg>
-                              </label>
-                            </li>
-                            <li class="color">
-                              <input class="color__val visually-hidden slider__toggle" id="color--red" type="radio" name="color" value="red"/>
-                              <label class="color__label color__label--lime pointer-anchor" for="color--red">красный
-                                <svg class="color__icon" fill="#e23232" width="22" height="22">
-                                  <circle cx="11" cy="11" r="10"></circle>
-                                </svg>
-                                      <svg class="color__pointer pointer" width="5" height="48" role="img" focusable="false" fill="none">
-                                        <polyline class="pointer__line" points="3,1 3,46" stroke-width="1"></polyline>
-                                        <circle class="pointer__point" cx="3" cy="46" r="1.5"></circle>
-                                      </svg>
-                              </label>
-                            </li>
-                            <li class="color">
-                              <input class="color__val visually-hidden slider__toggle" id="color--white" type="radio" name="color" value="white"/>
-                              <label class="color__label color__label--lime pointer-anchor" for="color--white">белый
-                                <svg class="color__icon" fill="#f0efef" width="22" height="22">
-                                  <circle cx="11" cy="11" r="10"></circle>
-                                </svg>
-                                      <svg class="color__pointer pointer" width="5" height="48" role="img" focusable="false" fill="none">
-                                        <polyline class="pointer__line" points="3,1 3,46" stroke-width="1"></polyline>
-                                        <circle class="pointer__point" cx="3" cy="46" r="1.5"></circle>
-                                      </svg>
-                              </label>
-                            </li>
-                            <li class="color">
-                              <input class="color__val visually-hidden slider__toggle" id="color--black" type="radio" name="color" value="black"/>
-                              <label class="color__label color__label--lime pointer-anchor" for="color--black">черный
-                                <svg class="color__icon" fill="#0c0c0c" width="22" height="22">
-                                  <circle cx="11" cy="11" r="10"></circle>
-                                </svg>
-                                      <svg class="color__pointer pointer" width="5" height="48" role="img" focusable="false" fill="none">
-                                        <polyline class="pointer__line" points="3,1 3,46" stroke-width="1"></polyline>
-                                        <circle class="pointer__point" cx="3" cy="46" r="1.5"></circle>
-                                      </svg>
-                              </label>
-                            </li>
-                    </ul>
-                  </form>
-                  <div class="product-info__background"></div>
-                  <ul class="slider__list product-info__previews">
-                          <li class="slide preview">
-                            <picture>
-                              <source type="image/webp" srcset="img/preview/lime@3.webp 3x, img/preview/lime@2.webp 2x,
-              img/preview/lime.webp 1x"/><img class="preview__image" src="img/preview/lime.png" srcset="img/preview/lime@3.png 3x, img/preview/lime@2.png 2x" alt="лаймовый" width="325" height="167"/>
-                            </picture>
-                          </li>
-                          <li class="slide preview">
-                            <picture>
-                              <source type="image/webp" srcset="img/preview/cyan@3.webp 3x, img/preview/cyan@2.webp 2x,
-              img/preview/cyan.webp 1x"/><img class="preview__image" src="img/preview/cyan.png" srcset="img/preview/cyan@3.png 3x, img/preview/cyan@2.png 2x" alt="циановый" width="325" height="167"/>
-                            </picture>
-                          </li>
-                          <li class="slide preview">
-                            <picture>
-                              <source type="image/webp" srcset="img/preview/red@3.webp 3x, img/preview/red@2.webp 2x,
-              img/preview/red.webp 1x"/><img class="preview__image" src="img/preview/red.png" srcset="img/preview/red@3.png 3x, img/preview/red@2.png 2x" alt="красный" width="325" height="167"/>
-                            </picture>
-                          </li>
-                          <li class="slide preview">
-                            <picture>
-                              <source type="image/webp" srcset="img/preview/white@3.webp 3x, img/preview/white@2.webp 2x,
-              img/preview/white.webp 1x"/><img class="preview__image" src="img/preview/white.png" srcset="img/preview/white@3.png 3x, img/preview/white@2.png 2x" alt="белый" width="325" height="167"/>
-                            </picture>
-                          </li>
-                          <li class="slide preview">
-                            <picture>
-                              <source type="image/webp" srcset="img/preview/black@3.webp 3x, img/preview/black@2.webp 2x,
-              img/preview/black.webp 1x"/><img class="preview__image" src="img/preview/black.png" srcset="img/preview/black@3.png 3x, img/preview/black@2.png 2x" alt="черный" width="325" height="167"/>
-                            </picture>
-                          </li>
-                  </ul>
-                </article>
-              </li>
+
+
+  <main class="page-main">
+    
+  <section class="intro" id="intro">
+  <figure class="intro__wrapper container">
+    <svg class="intro__decorative decorative" role="img" focusable="false" width="0" height="0">
+      <use xlink:href="#logo__gear"></use>
+    </svg>
+
+    
+<div class="video intro__media" data-id="678suPK9iIc">
+  <a class="video__link" href="https://youtu.be/" + 678suPK9iIc>
+    <img src="img/photo1.jpg" alt="Представляем undefined" class="video__preview intro__preview" height="200">
+  </a>
+  
+  <button class="intro__play video__play">
+    <span class="video__play-text">Смотреть <br> видео</span>
+    <svg class="video__play-icon" role="img" focusable="false" width="66" height="72">
+      <use xlink:href="#icon-play"></use>
+    </svg>
+  </button>
+  
+</div>
+
+
+    <figcaption class="intro__text">
+      <h1 class="intro__title pointer-anchor headline">
+        Rizor<br>
+        
+
+<svg class="intro__pointer pointer" width="20" height="72" role="img" focusable="false"
+  fill="none">
+  <polyline class="pointer__line" points="0,71 17,71 17,3" stroke-width="1"></polyline>
+  <circle class="pointer__point" cx="17" cy="3" r="1.5"></circle>
+</svg>
+
+        Hovertrax<br>
+        <b class="product__ver">4.0</b>
+      </h1>
+      <p class="intro__subtitle subheadline">Маневренность, легкость, экологичность</p>
+
+      <a class="intro__scroll-down" href="#features">Листать вниз
+        <svg class="intro__scroll-down-arrow" role="img" focusable="false" width="12" height="96">
+          <use xlink:href="#icon-down"></use>
+        </svg>
+      </a>
+    </figcaption>
+  </figure>
+</section>
+
+  <section class="features" id="features">
+  <figure class="features__wrapper container">
+    <p class="features__decorative decorative headline">
+      <span class="product__ver">4.0</span><br>
+      Rizor
+    </p>
+
+    
+<div class="video features__media" data-id="678suPK9iIc">
+  <a class="video__link" href="https://youtu.be/" + 678suPK9iIc>
+    <img src="img/photo2.jpg" alt="Представляем undefined" class="video__preview features__preview" height="200">
+  </a>
+  
+  <button class="video__play video__play--simple">
+    <span class="visually-hidden">Смотреть видео</span>
+    <svg class="video__play-icon" role="img" focusable="false" width="66" height="72">
+      <use xlink:href="#icon-play"></use>
+    </svg>
+  </button>
+  
+</div>
+
+
+    <figcaption class="features__text">
+      <h2 class="features__headline section-name">Преимущества</h2>
+      <ul class="features__specs">
+        <li class="features__specs-item features__specs-item--design">
+          <article class="product-info product-info--design">
+            <h3 class="product-info__title">Дизайн</h3>
+            <p class="product-info__subtitle">Внешний вид скутера дышит идеями футуризма:</p>
+            <ul class="product-info__list">
+              <li class="product-info__spec">плавные линии</li>
+              <li class="product-info__spec">подсветка светодиодными индикаторами</li>
+              <li class="product-info__spec">рельефные бамперы, оснащенные защитными панелями</li>
             </ul>
-          </figcaption>
-        </figure>
-      </section>
-      <section class="specs" id="specs">
-        <figure class="specs__wrapper container">
-          <svg class="specs__decorative decorative" role="img" focusable="false" width="0" height="0">
-            <use xlink:href="#logo__gear"></use>
-          </svg>
-                <div class="video specs__media" data-id="Ryaj7_Vm16E"><a class="video__link" href="https://youtu.be/Ryaj7_Vm16E"><img class="specs__preview video__preview" src="img/specs.jpg" alt="Представляем Rizor Hovertrax 4.0" height="200"/></a>
-                  <button class="specs__play video__play"><span class="video__play-text">Смотреть <br> видео</span>
-                    <svg class="video__play-icon" role="img" focusable="false" width="66" height="72">
-                      <use xlink:href="#icon-play"></use>
-                    </svg>
-                  </button>
-                </div>
-          <figcaption class="specs__text">
-            <h2 class="specs__headline section-name visually-hidden">Характеристики</h2>
-            <article class="product-info product-info--modes">
-              <h3 class="product-info__title pointer-anchor">Режимы
-                      <svg class="specs__pointer pointer" width="158" height="474" role="img" focusable="false" fill="none">
-                        <polyline class="pointer__line" points="0,1 156,1 156,472" stroke-width="1"></polyline>
-                        <circle class="pointer__point" cx="156" cy="472" r="1.5"></circle>
-                      </svg>
+          </article>
+        </li>
+        <li class="features__specs-item features__specs-item--color">
+          <article class="product-info product-info--color slider">
+            <form class="color-choose">
+              <h3 class="product-info__title pointer-anchor">Цвет
+                
+
+<svg class="features__pointer pointer" width="18" height="290" role="img" focusable="false"
+  fill="none">
+  <polyline class="pointer__line" points="18,1 2,1 2,288" stroke-width="1"></polyline>
+  <circle class="pointer__point" cx="2" cy="288" r="1.5"></circle>
+</svg>
+
               </h3>
-              <p class="product-info__subtitle product-info__subtitle--modes">Помимо «умной» подсветки, <b class="strong">Hovertrax 4.0 <br></b>снабжён двумя скоростными режимами.</p>
-              <ul class="product-info__list product-info__list--modes">
-                <li class="product-info__spec product-info__spec--modes">Один для продвинутых пользователей</li>
-                <li class="product-info__spec product-info__spec--modes">Второй для новичков</li>
+              <p class="product-info__subtitle">Модель представлена сразу <br> в нескольких цветах.</p>
+              <ul class="color-choose__list slider__toggles">
+                
+<li class="color">
+  <input class="color__val visually-hidden slider__toggle" id="color--lime" type="radio" name="color" value="lime"
+    checked />
+  <label class="color__label color__label--lime pointer-anchor" for="color--lime"> лаймовый
+    <svg class="color__icon" fill="#e2e837" width="22" height="22">
+      <circle cx="11" cy="11" r="10"></circle>
+    </svg>
+    
+
+<svg class="color__pointer pointer" width="5" height="48" role="img" focusable="false"
+  fill="none">
+  <polyline class="pointer__line" points="3,1 3,46" stroke-width="1"></polyline>
+  <circle class="pointer__point" cx="3" cy="46" r="1.5"></circle>
+</svg>
+
+  </label>
+</li>
+
+
+                
+<li class="color">
+  <input class="color__val visually-hidden slider__toggle" id="color--cyan" type="radio" name="color" value="lime"
+     />
+  <label class="color__label color__label--cyan pointer-anchor" for="color--cyan"> циановый
+    <svg class="color__icon" fill="#00b6f1" width="22" height="22">
+      <circle cx="11" cy="11" r="10"></circle>
+    </svg>
+    
+
+<svg class="color__pointer pointer" width="5" height="48" role="img" focusable="false"
+  fill="none">
+  <polyline class="pointer__line" points="3,1 3,46" stroke-width="1"></polyline>
+  <circle class="pointer__point" cx="3" cy="46" r="1.5"></circle>
+</svg>
+
+  </label>
+</li>
+
+
+                
+<li class="color">
+  <input class="color__val visually-hidden slider__toggle" id="color--red" type="radio" name="color" value="lime"
+     />
+  <label class="color__label color__label--red pointer-anchor" for="color--red"> красный
+    <svg class="color__icon" fill="#e23232" width="22" height="22">
+      <circle cx="11" cy="11" r="10"></circle>
+    </svg>
+    
+
+<svg class="color__pointer pointer" width="5" height="48" role="img" focusable="false"
+  fill="none">
+  <polyline class="pointer__line" points="3,1 3,46" stroke-width="1"></polyline>
+  <circle class="pointer__point" cx="3" cy="46" r="1.5"></circle>
+</svg>
+
+  </label>
+</li>
+
+
+                
+<li class="color">
+  <input class="color__val visually-hidden slider__toggle" id="color--white" type="radio" name="color" value="lime"
+     />
+  <label class="color__label color__label--white pointer-anchor" for="color--white"> белый
+    <svg class="color__icon" fill="#f0efef" width="22" height="22">
+      <circle cx="11" cy="11" r="10"></circle>
+    </svg>
+    
+
+<svg class="color__pointer pointer" width="5" height="48" role="img" focusable="false"
+  fill="none">
+  <polyline class="pointer__line" points="3,1 3,46" stroke-width="1"></polyline>
+  <circle class="pointer__point" cx="3" cy="46" r="1.5"></circle>
+</svg>
+
+  </label>
+</li>
+
+
+                
+<li class="color">
+  <input class="color__val visually-hidden slider__toggle" id="color--black" type="radio" name="color" value="lime"
+     />
+  <label class="color__label color__label--black pointer-anchor" for="color--black"> черный
+    <svg class="color__icon" fill="#0c0c0c" width="22" height="22">
+      <circle cx="11" cy="11" r="10"></circle>
+    </svg>
+    
+
+<svg class="color__pointer pointer" width="5" height="48" role="img" focusable="false"
+  fill="none">
+  <polyline class="pointer__line" points="3,1 3,46" stroke-width="1"></polyline>
+  <circle class="pointer__point" cx="3" cy="46" r="1.5"></circle>
+</svg>
+
+  </label>
+</li>
+
+
               </ul>
-              <table class="table product-info__table">
-                <thead class="table__head">
-                  <tr>
-                    <th class="table__headline">Максимальная <br> скорость</th>
-                    <th class="table__headline">Скоростных <br>  режима</th>
-                  </tr>
-                </thead>
-                <tbody class="table__body">
-                  <tr>
-                    <td class="table__value">13<i class="table__units">км/ч</i></td>
-                    <td class="table__value">2</td>
-                  </tr>
-                </tbody>
-              </table>
-            </article>
-          </figcaption>
-        </figure>
-      </section>
-      <section class="for-whom" id="for-whom">
-        <div class="for-whom__wrapper">
-          <figure class="for-whom__content container">
-            <svg class="for-whom__decorative decorative" role="img" focusable="false" width="0" height="0">
-              <use xlink:href="#logo__gear"></use>
-            </svg>
-            <div class="for-whom__media">
-              <p class="for-whom__media-decorative decorative headline"><span class="product__ver">4.0</span><br>Rizor</p><img class="for-whom__image" src="img/photo3.jpg" alt="Целевая аудитория" width="590" height="376"/>
-            </div>
-            <figcaption class="for-whom__text">
-              <h2 class="for-whom__title section-name">Для кого</h2>
-              <p class="for-whom__message">При максимально выдерживаемой нагрузке в <b class="strong">100 кг </b>отлично подойдёт, <br> как для подрастающего поколения, <br> так и для более взрослых «наездников».</p>
-              <p>Это единственный гироскутер со специальным детским режимом <br> езды.</p><a class="for-whom__button button button--invert" href="/catalogue">Перейти в каталог</a>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-    </main>
-    <aside class="side-nav">
-      <ul class="side-nav__list">
-        <li class="side-nav__item"><a class="side-nav__link" href="#intro"></a></li>
-        <li class="side-nav__item"><a class="side-nav__link" href="#features">Преимущества</a></li>
-        <li class="side-nav__item"><a class="side-nav__link" href="#specs">Характеристики</a></li>
-        <li class="side-nav__item"><a class="side-nav__link" href="#for-whom">Для кого</a></li>
+            </form>
+            <div class="product-info__background"></div>
+            <ul class="slider__list product-info__previews">
+              
+<li class="slide preview">
+  <picture>
+    <source type="image/webp" srcset="img/preview/lime@3.webp 3x, img/preview/lime@2.webp 2x,
+              img/preview/lime.webp 1x" /><img class="preview__image" src="img/preview/lime.png"
+      srcset="img/preview/lime@3.png 3x, img/preview/lime@2.png 2x" alt=лаймовый width="325" height="167" />
+  </picture>
+</li>
+
+              
+<li class="slide preview">
+  <picture>
+    <source type="image/webp" srcset="img/preview/cyan@3.webp 3x, img/preview/cyan@2.webp 2x,
+              img/preview/cyan.webp 1x" /><img class="preview__image" src="img/preview/cyan.png"
+      srcset="img/preview/cyan@3.png 3x, img/preview/cyan@2.png 2x" alt=циановый width="325" height="167" />
+  </picture>
+</li>
+
+              
+<li class="slide preview">
+  <picture>
+    <source type="image/webp" srcset="img/preview/red@3.webp 3x, img/preview/red@2.webp 2x,
+              img/preview/red.webp 1x" /><img class="preview__image" src="img/preview/red.png"
+      srcset="img/preview/red@3.png 3x, img/preview/red@2.png 2x" alt=красный width="325" height="167" />
+  </picture>
+</li>
+
+              
+<li class="slide preview">
+  <picture>
+    <source type="image/webp" srcset="img/preview/white@3.webp 3x, img/preview/white@2.webp 2x,
+              img/preview/white.webp 1x" /><img class="preview__image" src="img/preview/white.png"
+      srcset="img/preview/white@3.png 3x, img/preview/white@2.png 2x" alt=белый width="325" height="167" />
+  </picture>
+</li>
+
+              
+<li class="slide preview">
+  <picture>
+    <source type="image/webp" srcset="img/preview/black@3.webp 3x, img/preview/black@2.webp 2x,
+              img/preview/black.webp 1x" /><img class="preview__image" src="img/preview/black.png"
+      srcset="img/preview/black@3.png 3x, img/preview/black@2.png 2x" alt=черный width="325" height="167" />
+  </picture>
+</li>
+
+
+            </ul>
+          </article>
+        </li>
       </ul>
-    </aside>
-    <footer class="page-footer">
-      <p class="page-footer__copyright" lang="en">© All rights reserved, 2017</p>
-    </footer>
-    <script src="js/navigation.js"></script>
-    <script src="js/video.js"></script>
-    <script src="js/slider.js"></script>
-  </body>
+    </figcaption>
+  </figure>
+</section>
+
+  <section class="specs" id="specs">
+  <figure class="specs__wrapper container">
+    <svg class="specs__decorative decorative" role="img" focusable="false" width="0" height="0">
+      <use xlink:href="#logo__gear"></use>
+    </svg>
+    
+<div class="video specs__media" data-id="Ryaj7_Vm16E">
+  <a class="video__link" href="https://youtu.be/" + Ryaj7_Vm16E>
+    <img src="img/specs.jpg" alt="Представляем Rizor Hovertrax 4.0" class="video__preview specs__preview" height="200">
+  </a>
+  
+  <button class="specs__play video__play">
+    <span class="video__play-text">Смотреть <br> видео</span>
+    <svg class="video__play-icon" role="img" focusable="false" width="66" height="72">
+      <use xlink:href="#icon-play"></use>
+    </svg>
+  </button>
+  
+</div>
+
+    <figcaption class="specs__text">
+      <h2 class="specs__headline section-name visually-hidden">Характеристики</h2>
+      <article class="product-info product-info--modes">
+        <h3 class="product-info__title pointer-anchor">Режимы
+          
+
+<svg class="specs__pointer pointer" width="158" height="474" role="img" focusable="false"
+  fill="none">
+  <polyline class="pointer__line" points="0,1 156,1 156,472" stroke-width="1"></polyline>
+  <circle class="pointer__point" cx="156" cy="472" r="1.5"></circle>
+</svg>
+
+        </h3>
+        <p class="product-info__subtitle product-info__subtitle--modes">Помимо «умной» подсветки, <b
+            class="strong">Hovertrax 4.0<br></b>снабжён двумя скоростными режимами.</p>
+        <ul class="product-info__list product-info__list--modes">
+          <li class="product-info__spec product-info__spec--modes">Один для продвинутых пользователей</li>
+          <li class="product-info__spec product-info__spec--modes">Второй для новичков</li>
+        </ul>
+        <table class="table product-info__table">
+          <thead class="table__head">
+            <tr>
+              <th class="table__headline">Максимальная <br> скорость</th>
+              <th class="table__headline">Скоростных <br> режима</th>
+            </tr>
+          </thead>
+          <tbody class="table__body">
+            <tr>
+              <td class="table__value">13<i class="table__units">км/ч</i></td>
+              <td class="table__value">2</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </figcaption>
+  </figure>
+</section>
+
+  <section class="for-whom" id="for-whom">
+  <div class="for-whom__wrapper">
+    <figure class="for-whom__content container">
+      <svg class="for-whom__decorative decorative" role="img" focusable="false" width="0" height="0">
+        <use xlink:href="#logo__gear"></use>
+      </svg>
+      <div class="for-whom__media">
+        <p class="for-whom__media-decorative decorative headline"><span class="product__ver">4.0</span><br>Rizor</p>
+        <img class="for-whom__image" src="img/photo3.jpg" alt="Целевая аудитория" width="590" height="376" />
+      </div>
+      <figcaption class="for-whom__text">
+        <h2 class="for-whom__title section-name">Для кого</h2>
+        <p class="for-whom__message">При максимально выдерживаемой нагрузке в <b class="strong">100 кг </b>отлично
+          подойдёт, <br> как для подрастающего поколения, <br> так и для более взрослых «наездников».</p>
+        <p>Это единственный гироскутер со специальным детским режимом <br> езды.</p><a
+          class="for-whom__button button button--invert" href="/catalogue">Перейти в каталог</a>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+
+  </main>
+
+  <aside class="side-nav">
+  <ul class="side-nav__list">
+    <li class="side-nav__item"><a class="side-nav__link" href="#intro">Интро</a></li>
+
+    
+    <li class="side-nav__item"><a class="side-nav__link" href=#features>Преимущества</a></li>
+
+    
+    <li class="side-nav__item"><a class="side-nav__link" href=#specs>Характеристики</a></li>
+
+    
+    <li class="side-nav__item"><a class="side-nav__link" href=#for-whom>Для кого</a></li>
+
+    
+  </ul>
+</aside>
+
+  <footer class="page-footer">
+  <p class="page-footer__copyright" lang="en">© All rights reserved, 2017</p>
+</footer>
+
+
+  <script src="js/navigation.js"></script>
+  <script src="js/video.js"></script>
+  <script src="js/slider.js"></script>
+
+</body>
+
 </html>

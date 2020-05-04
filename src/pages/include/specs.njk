@@ -1,0 +1,36 @@
+<section class="specs" id="specs">
+  <figure class="specs__wrapper container">
+    <svg class="specs__decorative decorative" role="img" focusable="false" width="0" height="0">
+      <use xlink:href="#logo__gear"></use>
+    </svg>
+    {{ macro.createVideo("specs", "specs", isSimpleButton = false, alt="Представляем "+ title, id="Ryaj7_Vm16E") }}
+    <figcaption class="specs__text">
+      <h2 class="specs__headline section-name visually-hidden">Характеристики</h2>
+      <article class="product-info product-info--modes">
+        <h3 class="product-info__title pointer-anchor">Режимы
+          {{ macro.drawPointer("158", "474", "specs", "0,1 156,1 156,472", "156", "472") }}
+        </h3>
+        <p class="product-info__subtitle product-info__subtitle--modes">Помимо «умной» подсветки, <b
+            class="strong">{{product.line}} {{product.ver}}<br></b>снабжён двумя скоростными режимами.</p>
+        <ul class="product-info__list product-info__list--modes">
+          <li class="product-info__spec product-info__spec--modes">Один для продвинутых пользователей</li>
+          <li class="product-info__spec product-info__spec--modes">Второй для новичков</li>
+        </ul>
+        <table class="table product-info__table">
+          <thead class="table__head">
+            <tr>
+              <th class="table__headline">Максимальная <br> скорость</th>
+              <th class="table__headline">Скоростных <br> режима</th>
+            </tr>
+          </thead>
+          <tbody class="table__body">
+            <tr>
+              <td class="table__value">13<i class="table__units">км/ч</i></td>
+              <td class="table__value">2</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </figcaption>
+  </figure>
+</section>

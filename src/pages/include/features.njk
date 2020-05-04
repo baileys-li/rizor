@@ -1,0 +1,53 @@
+<section class="features" id="features">
+  <figure class="features__wrapper container">
+    <p class="features__decorative decorative headline">
+      <span class="product__ver">{{ product.ver }}</span><br>
+      {{ product.company }}
+    </p>
+
+    {{ macro.createVideo("features", "photo2", isSimpleButton=true) }}
+
+    <figcaption class="features__text">
+      <h2 class="features__headline section-name">Преимущества</h2>
+      <ul class="features__specs">
+        <li class="features__specs-item features__specs-item--design">
+          <article class="product-info product-info--design">
+            <h3 class="product-info__title">Дизайн</h3>
+            <p class="product-info__subtitle">Внешний вид скутера дышит идеями футуризма:</p>
+            <ul class="product-info__list">
+              <li class="product-info__spec">плавные линии</li>
+              <li class="product-info__spec">подсветка светодиодными индикаторами</li>
+              <li class="product-info__spec">рельефные бамперы, оснащенные защитными панелями</li>
+            </ul>
+          </article>
+        </li>
+        <li class="features__specs-item features__specs-item--color">
+          <article class="product-info product-info--color slider">
+            <form class="color-choose">
+              <h3 class="product-info__title pointer-anchor">Цвет
+                {{ macro.drawPointer("18", "290", "features", "18,1 2,1 2,288", "2", "288") }}
+              </h3>
+              <p class="product-info__subtitle">Модель представлена сразу <br> в нескольких цветах.</p>
+              <ul class="color-choose__list slider__toggles">
+                {{ macro.createColor("lime", "лаймовый", "#e2e837", "checked") }}
+                {{ macro.createColor("cyan", "циановый", "#00b6f1") }}
+                {{ macro.createColor("red", "красный", "#e23232") }}
+                {{ macro.createColor("white", "белый", "#f0efef") }}
+                {{ macro.createColor("black", "черный", "#0c0c0c") }}
+              </ul>
+            </form>
+            <div class="product-info__background"></div>
+            <ul class="slider__list product-info__previews">
+              {{ macro.createPreview("lime", "лаймовый") }}
+              {{ macro.createPreview("cyan", "циановый") }}
+              {{ macro.createPreview("red", "красный") }}
+              {{ macro.createPreview("white", "белый") }}
+              {{ macro.createPreview("black", "черный") }}
+
+            </ul>
+          </article>
+        </li>
+      </ul>
+    </figcaption>
+  </figure>
+</section>

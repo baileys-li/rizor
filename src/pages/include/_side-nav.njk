@@ -1,0 +1,13 @@
+<aside class="side-nav">
+  <ul class="side-nav__list">
+    <li class="side-nav__item"><a class="side-nav__link" href="#intro">Интро</a></li>
+
+    {% for link, text in navItems %}
+    <li class="side-nav__item"><a class="side-nav__link" href={{link}}>{{text}}</a></li>
+
+    {% else %}
+    <li class="side-nav__item"><a class="side-nav__link">Error</a></li>
+
+    {% endfor %}
+  </ul>
+</aside>
